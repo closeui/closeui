@@ -60,9 +60,13 @@ app.use(devMiddleware)
 // compilation error display
 app.use(hotMiddleware)
 
+app.use('/favicon.ico', express.static('./example/favicon.ico'))
+app.use('/version.json', express.static('./example/version.json'))
+app.use('/', express.static('./example/assets'))
+
 // serve pure static assets
-var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
-app.use(staticPath, express.static('./static'))
+// var staticPath = path.posix.join(config.dev.assetsPublicPath, config.dev.assetsSubDirectory)
+// app.use(staticPath, express.static('./static'))
 
 var uri = 'http://localhost:' + port
 
