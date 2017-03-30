@@ -1,6 +1,5 @@
-# carapp
-
-> kjz webapp
+# bzui
+基于vue2 的UI 组件库
 
 ## Build Setup
 
@@ -28,3 +27,6 @@ npm test
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+----------
+webpack.base.conf js loader 中include 需要处理的目录

@@ -21,13 +21,13 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      'bzui': path.resolve(__dirname, '../src')
+      'bzui': path.resolve(__dirname, '../src'),
       'vue$': 'vue/dist/vue.esm.js',
-      'src': resolve('src'),
+      'src': resolve('src')
     }
   },
   resolveLoader: {
-    moduleExtensions: ['-loader']
+    // moduleExtensions: ['-loader']
   },
   module: {
     rules: [
@@ -48,7 +48,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test')]
+        include: [resolve('src'), resolve('example'), resolve('test')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
