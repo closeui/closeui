@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+    <bz-header fixed title="固定在顶部"></bz-header>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>

@@ -1,0 +1,24 @@
+@import "./normalize.scss";
+@import "./var.scss";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $fontFamily;
+  line-height: 1.5;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  -webkit-user-select: none;
+}
