@@ -11,6 +11,19 @@
 </template>
 
 <script>
+/**
+ * bz-header
+ * @desc 顶部导航
+ * @param {boolean} [fixed=false] - 固定顶部
+ * @param {string} [title] - 标题
+ * @param {slot} [left] - 显示在左侧区域
+ * @param {slot} [right] - 显示在右侧区域
+ * @example
+ * <bz-header title="这里是标题" fixed>
+ *  <bz-button slot="left" icon="back">返回</bz-button>
+ *  <bz-button slot="right" icon="more">返回</bz-button>
+ * </bz-header>
+ */
 export default {
   name: 'bz-header',
   props: {

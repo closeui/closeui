@@ -1,9 +1,11 @@
 import './style/base.scss'
 import Vue from 'vue'
 import Header from './header'
+import Button from './button'
 
 const components = {
-  Header
+  Header,
+  Button
 }
 
 const install = function () {
