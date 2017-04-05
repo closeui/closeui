@@ -1,6 +1,21 @@
 # bzui
 基于vue2 的UI 组件库
 
+## Install
+
+```bash
+npm install bzui -save
+```
+
+## Get Started
+
+```javascript
+import Vue from 'vue'
+import Bzui from 'bzui'
+import 'bzui/dist/bzui.css'
+Vue.use(Bzui)
+```
+
 ## Build Setup
 
 ``` bash
