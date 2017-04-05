@@ -1,11 +1,14 @@
 import './style/base.scss'
+import './style/font/iconfont.css'
 import Vue from 'vue'
 import Header from './header'
 import Button from './button'
+import Cell from './cell'
 
 const components = {
   Header,
-  Button
+  Button,
+  Cell
 }
 
 const install = function () {

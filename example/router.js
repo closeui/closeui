@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import Header from './views/header'
 import Button from './views/button'
+import Cell from './views/cell'
 Vue.use(Router)
 
 const router = new Router({
@@ -10,6 +11,7 @@ const router = new Router({
   routes: [
     { path: '/header', component: Header },
     { path: '/button', component: Button },
+    { path: '/cell', component: Cell },
     { path: '*', redirect: '/header' }
   ]
 })

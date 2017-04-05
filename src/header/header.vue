@@ -41,10 +41,10 @@ export default {
   box-sizing: border-box;
   color: $color-white;
   display: flex;
-  font-size: 14px;
+  font-size: 1.4rem;
   height: $header-height;
   line-height: 1;
-  padding: 0 10px;
+  padding: 0 1rem;
   position: relative;
   text-align: center;
   white-space: nowrap;
@@ -85,7 +85,10 @@ export default {
     white-space: nowrap;
   }
   &.is-fixed {
-    position: fixed 0 0 * 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: $z-index-normal
   }
 }
