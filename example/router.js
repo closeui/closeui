@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Header from './views/header'
 import Button from './views/button'
 import Cell from './views/cell'
+import CellSwipe from './views/cell-swipe'
 Vue.use(Router)
 
 const router = new Router({
@@ -12,6 +13,7 @@ const router = new Router({
     { path: '/header', component: Header },
     { path: '/button', component: Button },
     { path: '/cell', component: Cell },
+    { path: '/cellswipe', component: CellSwipe },
     { path: '*', redirect: '/header' }
   ]
 })

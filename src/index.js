@@ -4,11 +4,13 @@ import Vue from 'vue'
 import Header from './header'
 import Button from './button'
 import Cell from './cell'
+import CellSwipe from './cell-swipe'
 
 const components = {
   Header,
   Button,
-  Cell
+  Cell,
+  CellSwipe
 }
 
 const install = function () {
