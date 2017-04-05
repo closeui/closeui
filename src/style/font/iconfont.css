@@ -1,0 +1,20 @@
+
+@font-face {font-family: "bzui";
+  src: url('iconfont.ttf?t=1464927413')
+}
+
+.bzui {
+  font-family:"bzui" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.bzui-search:before { content: "\e604"; }
+.bzui-more:before { content: "\e601"; }
+.bzui-back:before { content: "\e600"; }
+.bzui-field-error:before { content: "\e605"; }
+.bzui-field-warning:before { content: "\e608"; }
+.bzui-success:before { content: "\e602"; }
+.bzui-field-success:before { content: "\e609"; }

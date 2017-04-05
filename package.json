@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "ui components for vue2",
   "author": "bigezhang",
-  "main": "index.js",
+  "main": "dist/bzui.js",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
