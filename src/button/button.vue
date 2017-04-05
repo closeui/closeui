@@ -15,6 +15,20 @@
 </template>
 
 <script>
+/**
+ * bz-button
+ * @param {string} [type=default] - 显示类型，接受 default, primary, danger
+ * @param {boolean} [disabled=false] - 禁用
+ * @param {boolean} [plain=false] - 幽灵按钮
+ * @param {string} [size=normal] - 尺寸，normal, small, large
+ * @param {string} [native-type] - 原生 type 属性
+ * @param {string} [icon] - 图标, more, back, 或者自定义图标（传入不带前缀的图标类名， 最后拼接成.bz-xxx)
+ * @param {slot} - 显示文本
+ * @param {slot} [icon] 显示图标
+ *
+ * @example
+ * <bz-button size="large" icon="back" type="primary">button</bz-button>
+ */
 export default {
   name: 'bz-button',
   props: {
@@ -63,12 +77,12 @@ export default {
 @import "../style/base.scss";
 .bz-button {
   appearance: none;
-  border-radius: 4px;
+  border-radius: .4rem;
   border: 0;
   color: inherit;
   display: block;
-  font-size: 18px;
-  height: 41px;
+  font-size: 1.8rem;
+  height: 4.1rem;
   outline: 0;
   overflow: hidden;
   position: relative;
@@ -102,7 +116,7 @@ export default {
   background-color: $button-default-background-color;
   box-shadow: $button-default-box-shadow;
   &.is-plain {
-    border: 1px solid $button-default-plain-color;
+    border: .1rem solid $button-default-plain-color;
     background-color: transparent;
     box-shadow: none;
     color: $button-default-plain-color;
@@ -112,7 +126,7 @@ export default {
   color: $button-primary-color;
   background-color: $button-primary-background-color;
   &.is-plain {
-    border: 1px solid $button-primary-background-color;
+    border: .1rem solid $button-primary-background-color;
     background-color: transparent;
     color: $button-primary-background-color;
   }
@@ -121,7 +135,7 @@ export default {
   color: $button-danger-color;
   background-color: $button-danger-background-color;
   &.is-plain {
-    border: 1px solid $button-danger-background-color;
+    border: .1rem solid $button-danger-background-color;
     background-color: transparent;
     color: $button-danger-background-color;
   }
@@ -133,13 +147,13 @@ export default {
 }
 .bz-button--nomal {
   display: inline-block;
-  padding: 0 12px;
+  padding: 0 1.2rem;
 }
 .bz-button--small {
   display: inline-block;
-  font-size: 14px;
-  padding: 0 12px;
-  height: 33px;
+  font-size: 1.4rem;
+  padding: 0 1.2rem;
+  height: 3.3rem;
 }
 
 </style>
