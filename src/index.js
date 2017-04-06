@@ -7,6 +7,8 @@ import Cell from './cell'
 import CellSwipe from './cell-swipe'
 import TabItem from './tab-item'
 import Tabbar from './tabbar'
+import TabContainerItem from './tab-container-item'
+import TabContainer from './tab-container'
 
 const components = {
   Header,
@@ -14,7 +16,9 @@ const components = {
   Cell,
   CellSwipe,
   TabItem,
-  Tabbar
+  Tabbar,
+  TabContainerItem,
+  TabContainer
 }
 
 const install = function () {

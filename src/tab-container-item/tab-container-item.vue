@@ -3,7 +3,6 @@
     <slot></slot>
   </div>
 </template>
-
 <script>
 /**
  * bz-tab-container-item
@@ -14,7 +13,6 @@
  *  内容
  *  </bz-tab-container-item>
  * </bz-tab-container>
- * 
  */
 export default {
   name: 'bz-tab-container-item',
