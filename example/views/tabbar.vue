@@ -8,10 +8,10 @@
         <bz-cell v-for="n in 10" :key="n" :title="`餐厅${n}`"></bz-cell>
       </bz-tab-container-item>
       <bz-tab-container-item id="发现">
-        <bz-cell v-for="n in 10" :key="n" :title="`发现${n}`"></bz-cell>
+        <bz-cell v-for="n in 5" :key="n" :title="`发现${n}`"></bz-cell>
       </bz-tab-container-item>
       <bz-tab-container-item id="订单">
-        <bz-cell v-for="n in 10" :key="n" :title="`订单${n}`"></bz-cell>
+        <bz-cell v-for="n in 16" :key="n" :title="`订单${n}`"></bz-cell>
       </bz-tab-container-item>
     </bz-tab-container>
     <bz-tabbar v-model="selected" fixed>
