@@ -5,12 +5,16 @@ import Header from './header'
 import Button from './button'
 import Cell from './cell'
 import CellSwipe from './cell-swipe'
+import TabItem from './tab-item'
+import Tabbar from './tabbar'
 
 const components = {
   Header,
   Button,
   Cell,
-  CellSwipe
+  CellSwipe,
+  TabItem,
+  Tabbar
 }
 
 const install = function () {
