@@ -6,6 +6,8 @@ import Button from './views/button'
 import Cell from './views/cell'
 import CellSwipe from './views/cell-swipe'
 import Tabbar from './views/tabbar'
+import Navbar from './views/navbar'
+import TabContainer from './views/tab-container'
 Vue.use(Router)
 
 const router = new Router({
@@ -16,6 +18,8 @@ const router = new Router({
     { path: '/cell', component: Cell },
     { path: '/cellswipe', component: CellSwipe },
     { path: '/tabbar', component: Tabbar },
+    { path: '/navbar', component: Navbar },
+    { path: '/tab-container', component: TabContainer },
     { path: '*', redirect: '/header' }
   ]
 })

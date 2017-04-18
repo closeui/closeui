@@ -3,7 +3,8 @@
   @touchstart="startDrag"
   @mousedown="startDrag"
   @touchmove="onDrag"
-  @mousemove="endDrag"
+  @mousemove="onDrag"
+  @mouseleave="endDrag"
   @touchend="endDrag">
     <div class="bz-tab-container-wrap" ref="wrap">
       <slot></slot>
@@ -32,7 +33,7 @@ export default {
   data: function () {
     return {
       start: {x: 0, y: 0},
-      swipeing: false,
+      swiping: false,
       activeItems: [],
       pageWidth: 0,
       currentActive: this.value
@@ -82,19 +83,18 @@ export default {
       this.swiping = true
     },
     startDrag (evt) {
-      if (!this.swipeable) {
-        evt = evt.changedTouches ? evt.changedTouches[0] : evt
-        this.dragging = true
-        this.start.x = evt.pageX
-        this.start.y = evt.pageY
-      }
+      if (!this.swipeable) return
+      evt = evt.changedTouches ? evt.changedTouches[0] : evt
+      this.dragging = true
+      this.start.x = evt.pageX
+      this.start.y = evt.pageY
     },
     onDrag (evt) {
       if (!this.dragging) {
         return
       }
       let swiping
-      const e = evt.changeTouches ? evt.changedTouches[0] : evt
+      const e = evt.changedTouches ? evt.changedTouches[0] : evt
       const offsetTop = e.pageY - this.start.y
       const offsetLeft = e.pageX - this.start.x
       const y = Math.abs(offsetTop)

@@ -9,6 +9,7 @@ import TabItem from './tab-item'
 import Tabbar from './tabbar'
 import TabContainerItem from './tab-container-item'
 import TabContainer from './tab-container'
+import Navbar from './navbar'
 
 const components = {
   Header,
@@ -18,7 +19,8 @@ const components = {
   TabItem,
   Tabbar,
   TabContainerItem,
-  TabContainer
+  TabContainer,
+  Navbar
 }
 
 const install = function () {
