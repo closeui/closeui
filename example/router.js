@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import Demo from './views/demos'
 import Header from './views/header'
 import Button from './views/button'
 import Cell from './views/cell'
@@ -13,14 +14,15 @@ Vue.use(Router)
 const router = new Router({
   mode: 'hash',
   routes: [
-    { path: '/header', component: Header },
-    { path: '/button', component: Button },
-    { path: '/cell', component: Cell },
-    { path: '/cellswipe', component: CellSwipe },
-    { path: '/tabbar', component: Tabbar },
-    { path: '/navbar', component: Navbar },
-    { path: '/tab-container', component: TabContainer },
-    { path: '*', redirect: '/header' }
+    { path: '/', component: Demo, name: 'demo' },
+    { path: '/header', component: Header, name: 'header' },
+    { path: '/button', component: Button, name: 'button' },
+    { path: '/cell', component: Cell, name: 'cell' },
+    { path: '/cellswipe', component: CellSwipe, name: 'cellswipe' },
+    { path: '/tabbar', component: Tabbar, name: 'tabbar' },
+    { path: '/navbar', component: Navbar, name: 'navbar' },
+    { path: '/tab-container', component: TabContainer, name: 'tab-container' },
+    { path: '*', redirect: '/' }
   ]
 })
 
