@@ -10,6 +10,7 @@ import Tabbar from './tabbar'
 import TabContainerItem from './tab-container-item'
 import TabContainer from './tab-container'
 import Navbar from './navbar'
+import Spinner from './spinner'
 
 const components = {
   Header,
@@ -20,7 +21,8 @@ const components = {
   Tabbar,
   TabContainerItem,
   TabContainer,
-  Navbar
+  Navbar,
+  Spinner
 }
 
 const install = function () {
