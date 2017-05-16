@@ -12,6 +12,7 @@ import TabContainer from './tab-container'
 import Navbar from './navbar'
 import Spinner from './spinner'
 import Search from './search'
+import Switch from './switch'
 
 const components = {
   Header,
@@ -24,7 +25,8 @@ const components = {
   TabContainer,
   Navbar,
   Spinner,
-  Search
+  Search,
+  Switch
 }
 
 const install = function () {
