@@ -1,7 +1,7 @@
 <template>
   <div id="bz-checklist" @change="$emit('change', currentValue)" class="bz-checklist" :class="{ 'is-limit': max <= currentValue.length }">
     <label class="bz-checklist-title" v-text="title"></label>
-    <x-cell v-for="option in options">
+    <x-cell v-for="option in options" :key="option">
       <label class="bz-checklist-label" slot="title">
         <span :class="{'is-right': align === 'right'}" class="bz-checkbox">
           <input class="bz-checkbox-input" type="checkbox" v-model="currentValue" :disabled="option.disabled" :value="option.value || option" value="">
@@ -120,7 +120,7 @@ export default {
 
 .bz-checkbox-core {
   display: inline-block;
-  order-radius: 100%;
+  border-radius: 100%;
   border: 1px solid #ccc;
   position: relative;
   width: 2rem;
@@ -132,10 +132,10 @@ export default {
     border-top: 0;
     content: " ";
     position: absolute;
-    top: .3rem;
-    left: .6rem;
-    width: .4rem;
-    height: .8rem;
+    top: 3px;
+    left: 6px;
+    width: 4px;
+    height: 8px;
     transform: rotate(45deg) scale(0);
     transition: transform .2s;
   }

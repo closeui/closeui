@@ -12,6 +12,7 @@ import TabContainer from './views/tab-container'
 import Spinner from './views/spinner'
 import Search from './views/search'
 import Switch from './views/switch'
+import CheckList from './views/checklist'
 Vue.use(Router)
 
 const router = new Router({
@@ -28,6 +29,7 @@ const router = new Router({
     { path: '/spinner', component: Spinner, name: 'spinner' },
     { path: '/search', component: Search, name: 'search' },
     { path: '/switch', component: Switch, name: 'switch' },
+    { path: '/checklist', component: CheckList, name: 'checklist' },
     { path: '*', redirect: '/' }
   ]
 })

@@ -13,6 +13,7 @@ import Navbar from './navbar'
 import Spinner from './spinner'
 import Search from './search'
 import Switch from './switch'
+import CheckList from './checklist'
 
 const components = {
   Header,
@@ -26,7 +27,8 @@ const components = {
   Navbar,
   Spinner,
   Search,
-  Switch
+  Switch,
+  CheckList
 }
 
 const install = function () {
