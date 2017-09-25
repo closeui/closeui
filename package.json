@@ -1,7 +1,7 @@
 {
   "name": "bzui",
-  "version": "0.0.1",
-  "description": "ui components for vue2",
+  "version": "0.0.2",
+  "description": "UI components for vue2",
   "author": "bigezhang",
   "main": "dist/bzui.js",
   "scripts": {
