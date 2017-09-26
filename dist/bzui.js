@@ -1,5 +1,5 @@
 /*!
- * BZUI v0.0.1 (https://github.com/bigezhang/bzui)
+ * BZUI v0.0.2 (https://github.com/bigezhang/bzui)
  * (c) 2017 bigezhang 
  * Released under the MIT License.
  */
