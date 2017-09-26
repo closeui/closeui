@@ -5,14 +5,15 @@ cache:
   paths: 
     - node_modules/
 before_script:
-  - npm i -D    # 所有任务执行前都会执行该脚本，用于安装所有依赖包 
+  - yarn install   # 所有任务执行前都会执行该脚本，用于安装所有依赖包 
 # 添加 ‘build' 任务，描述构建任务的执行
 build:
   stage: build        # 定义所属阶段
   script:
     - npm run build   # 需要运行的脚本
   only:
-    - master           # 'build' 任务仅影响 'build' 分支
+    - master
+    - develop           # 'build' 任务仅影响 'build' 分支
 # 添加 'test' 任务， 描述测试任务的执行
 test:
   stage: test         # 定义所属阶段
