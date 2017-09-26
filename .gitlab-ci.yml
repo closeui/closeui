@@ -5,7 +5,7 @@ cache:
   paths: 
     - node_modules/
 before_script:
-  - yarn install   # 所有任务执行前都会执行该脚本，用于安装所有依赖包 
+  - npm i -D   # 所有任务执行前都会执行该脚本，用于安装所有依赖包 
 # 添加 'test' 任务， 描述测试任务的执行
 test:
   stage: test         # 定义所属阶段
