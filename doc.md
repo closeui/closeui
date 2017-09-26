@@ -4,7 +4,7 @@
 * weui  https://github.com/Tencent/weui (mobile)
 * vux https://github.com/airyland/vux (mobile)
 * vant https://github.com/youzan/vant (mobile)
-* ant-mobile  https://github.com/ant-design/ant-design-mobile  (mobile)
+* ant-mobile  https://github.com/ant-design/ant-design-mobile  (mobile & react)
 * at-ui https://at-ui.github.io/at-ui/#/zh
 * element https://github.com/ElemeFE/element
 * iview https://github.com/iview/iview
