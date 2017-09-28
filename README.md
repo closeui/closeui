@@ -1,19 +1,19 @@
-# bzui
-基于vue2 的UI 组件库
+# closeui
+A Vue.js 2.x Mobile UI
 
 ## Install
 
 ```bash
-npm install bzui -save
+npm install closeui -save
 ```
 
 ## Get Started
 
 ```javascript
 import Vue from 'vue'
-import Bzui from 'bzui'
-import 'bzui/dist/bzui.css'
-Vue.use(Bzui)
+import CloseUI from 'closeui'
+import 'closeui/dist/closeui.css'
+Vue.use(CloseUI)
 ```
 
 ## Build Setup
