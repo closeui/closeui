@@ -1,5 +1,22 @@
-# bzui
-基于vue2 的UI 组件库
+# closeui
+A Vue.js 2.x Mobile UI
+
+[![Build Status](https://travis-ci.org/bigezhang/closeui.svg?branch=develop)](https://travis-ci.org/bigezhang/closeui)
+
+## Install
+
+```bash
+npm install closeui -save
+```
+
+## Get Started
+
+```javascript
+import Vue from 'vue'
+import CloseUI from 'closeui'
+import 'closeui/dist/closeui.css'
+Vue.use(CloseUI)
+```
 
 ## Build Setup
 
@@ -7,7 +24,7 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8866
+# serve with hot reload at localhost:8899
 npm run dev
 
 # build for production with minification
@@ -23,7 +40,7 @@ npm run unit
 npm run e2e
 
 # run all tests
-npm test
+npm run test
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

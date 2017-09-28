@@ -1,0 +1,30 @@
+# .gitlab-ci.yml
+image: node:6
+# 缓存安装后的 node_modules ，以加速下次构建
+cache:
+  paths: 
+    - node_modules/
+before_script:
+  - npm i -D   # 所有任务执行前都会执行该脚本，用于安装所有依赖包 
+# 添加 'test' 任务， 描述测试任务的执行
+test:
+  stage: test         # 定义所属阶段
+  script:
+    - npm run test    # 需要运行的脚本
+  except:
+    - master          # 'test' 任务影响除 'master' 分支之外的所有分支
+# 添加 ‘build' 任务，描述构建任务的执行
+build:
+  stage: build        # 定义所属阶段
+  script:
+    - npm run build   # 需要运行的脚本
+  only:
+    - master
+    - develop           # 'build' 任务仅影响 'build' 分支
+# 添加 'deploy' 任务， 完成构建和部署
+# deploy:
+  # stage: deploy
+  # script:
+    # - . deploy.sh     # 需要运行的脚本
+  # only:
+    #- master          # 'deploy' 任务仅影响 'master' 分支

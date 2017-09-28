@@ -8,6 +8,7 @@ var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+var packageJson = require('../package.json')
 
 var env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
@@ -34,8 +35,8 @@ var webpackConfig = merge(baseWebpackConfig, {
   devtool: false,
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: 'bzui.js',
-    library: 'BZUI'
+    filename: 'closeui.js',
+    library: 'CloseUI',
     libraryTarget: 'umd'
   },
   externals: {
@@ -59,7 +60,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     }),
     // extract css into its own file
     new ExtractTextPlugin({
-      filename: 'bzui.css'
+      filename: 'closeui.css'
     }),
     // Compress extracted CSS. We are using this plugin so that possible
     // duplicated CSS from different components can be deduped.
