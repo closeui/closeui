@@ -1,6 +1,8 @@
 # closeui
 A Vue.js 2.x Mobile UI
 
+[![Build Status](https://travis-ci.org/bigezhang/closeui.svg?branch=develop)](https://travis-ci.org/bigezhang/closeui)
+
 ## Install
 
 ```bash
