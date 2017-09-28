@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import { install as Bzui } from 'src/index'
+import { install as CloseUI } from 'src/index'
 
-Vue.use(Bzui)
+Vue.use(CloseUI)
 /* eslint-disable no-new */
 new Vue({
   router,
