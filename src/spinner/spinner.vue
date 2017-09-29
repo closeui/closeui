@@ -3,15 +3,15 @@
 </template>
 <script>
 /**
- * bz-spinner
+ * cl-spinner
  * @param {(string|number)} [type=snake] - 显示类型，传入类型名或类型id, 'snake', 'double-bounce', 'triple-bounce', 'fading-circle'
  * @param {number} size - 尺寸
  * @param {string} color - 颜色
  *
  * @example
- * <bz-spinner type="snake"></bz-spinner>
+ * <cl-spinner type="snake"></cl-spinner>
  *
- * <bz-spinner :size="30" color="#999"></bz-spinner>
+ * <cl-spinner :size="30" color="#999"></cl-spinner>
  */
 const SPINNERS = [
   'snake',
@@ -34,7 +34,7 @@ const parseSpinner = function (index) {
   return index
 }
 export default {
-  name: 'bz-spinner',
+  name: 'cl-spinner',
   props: {
     type: {
       default: 0

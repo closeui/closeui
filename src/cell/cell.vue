@@ -1,39 +1,39 @@
 <template lang="html">
-  <a :href="href" class="bz-cell">
-    <span class="bz-cell-mask" v-if="isLink"></span>
-    <div class="bz-cell-left">
+  <a :href="href" class="cl-cell">
+    <span class="cl-cell-mask" v-if="isLink"></span>
+    <div class="cl-cell-left">
       <slot name="left"></slot>
     </div>
-    <div class="bz-cell-wrapper">
-      <div class="bz-cell-title">
+    <div class="cl-cell-wrapper">
+      <div class="cl-cell-title">
         <slot name="icon">
           <i v-if="icon" class="bzui" :class="'bzui-' + icon"></i>
         </slot>
         <slot name="title">
-          <span class="bz-cell-text" v-text="title"></span>
-          <span class="bz-cell-label" v-if="label" v-text="label"></span>
+          <span class="cl-cell-text" v-text="title"></span>
+          <span class="cl-cell-label" v-if="label" v-text="label"></span>
         </slot>
       </div>
-      <div class="bz-cell-value" :class="{'is-link' : isLink}">
+      <div class="cl-cell-value" :class="{'is-link' : isLink}">
         <slot>
           <span v-text="value"></span>
         </slot>
       </div>
     </div>
-    <div class="bz-cell-right">
+    <div class="cl-cell-right">
       <slot name="right"></slot>
     </div>
-    <i class="bz-cell-allow-right" v-if="isLink"></i>
+    <i class="cl-cell-allow-right" v-if="isLink"></i>
   </a>
 </template>
 
 <script>
 /**
- * bz-cell
+ * cl-cell
  * @param
  */
 export default {
-  name: 'bz-cell',
+  name: 'cl-cell',
   props: {
     to: [String, Object],
     icon: String,
@@ -76,7 +76,7 @@ export default {
 
 <style lang="scss">
 @import "../style/base.scss";
-.bz-cell {
+.cl-cell {
   background-color: $color-white;
   box-sizing: border-box;
   color: inherit;
@@ -86,7 +86,7 @@ export default {
   position: relative;
   text-decoration: none;
   &:first-child {
-    .bz-cell-wrapper {
+    .cl-cell-wrapper {
       background-origin: border-box;
     }
   }
@@ -100,7 +100,7 @@ export default {
     vertical-align: middle;
   }
 }
-.bz-cell-wrapper {
+.cl-cell-wrapper {
   background-image: linear-gradient(180deg, $color-grey, $color-grey 50%, transparent 50%);
   background-size: 120% .1rem;
   background-repeat: no-repeat;
@@ -116,7 +116,7 @@ export default {
   padding: 0 1rem;
   width: 100%;
 }
-.bz-cell-mask {
+.cl-cell-mask {
   &::after {
     background-color: #000;
     content: '';
@@ -132,19 +132,19 @@ export default {
   }
 }
 
-.bz-cell-text {
+.cl-cell-text {
   vertical-align: middle;
 }
-.bz-cell-label {
+.cl-cell-label {
   color: #888;
   display: block;
   font-size: 1.2rem;
   margin-top: .6rem;
 }
-.bz-cell-title {
+.cl-cell-title {
   flex: 1;
 }
-.bz-cell-value {
+.cl-cell-value {
   color: $cell-value-color;
   display: flex;
   align-items: center;
@@ -152,20 +152,20 @@ export default {
     margin-right: 2.4rem;
   }
 }
-.bz-cell-left {
+.cl-cell-left {
   position: absolute;
   height: 100%;
   left: 0;
   transform: translate3d(-100%, 0, 0);
 }
-.bz-cell-right {
+.cl-cell-right {
   position: absolute;
   height: 100%;
   right: 0;
   top: 0;
   transform: translate3d(100%, 0, 0);
 }
-.bz-cell-allow-right::after {
+.cl-cell-allow-right::after {
   border: .2rem solid $border-color;
   border-bottom-width: 0;
   border-left-width: 0;

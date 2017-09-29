@@ -1,24 +1,24 @@
 <template lang="html">
-  <div class="bz-navbar" :class="{'is-fixed': fixed}">
+  <div class="cl-navbar" :class="{'is-fixed': fixed}">
     <slot></slot>
   </div>
 </template>
 
 <script>
 /**
- * bz-navbar
+ * cl-navbar
  * @desc 顶部 tab, 依赖 tab-item
  * @param {boolean} [fixed=false] - 固定底部
  * @param {*} selected - 返回 item component 传入的value
  *
- * <bz-navbar :selected="selected">
- *  <bz-tab-item value="首页">
+ * <cl-navbar :selected="selected">
+ *  <cl-tab-item value="首页">
  *    <span slot="label">首页</span>
- *  </bz-tab-item>
- * </bz-navbar>
+ *  </cl-tab-item>
+ * </cl-navbar>
  */
 export default {
-  name: 'bz-navbar',
+  name: 'cl-navbar',
   props: {
     fixed: Boolean,
     value: {}
@@ -35,7 +35,7 @@ export default {
 
 <style lang="scss">
 @import "../style/base.scss";
-.bz-navbar {
+.cl-navbar {
   background-color: $color-white;
   display: flex;
   text-align: center;
@@ -47,7 +47,7 @@ export default {
     z-index: $z-index-normal;
   }
   
-  .bz-tab-item {
+  .cl-tab-item {
     padding: 1.7rem 0;
     font-size: 1.5rem;
     &:last-child {

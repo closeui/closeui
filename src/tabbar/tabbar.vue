@@ -1,31 +1,31 @@
 <template lang="html">
-  <div class="bz-tabbar" :class="{'is-fixed': fixed}">
+  <div class="cl-tabbar" :class="{'is-fixed': fixed}">
     <slot></slot>
   </div>
 </template>
 
 <script>
 /**
- * bz-tabbar
+ * cl-tabbar
  * @desc 底部tab, 依赖 tab-item
  * @param {boolean} [fixed=false] - 固定底部
  * @param {*} value - 返回 item component 传入的 id
  *
- * <bz-tabbar v-model="selected">
- *  <bz-tab-item id="订单">
+ * <cl-tabbar v-model="selected">
+ *  <cl-tab-item id="订单">
  *    <img src="http://placehold.it/100x100" slot="icon" alt=""/>
  *    <span slot="label">订单</span>
- *  </bz-tab-item>
- * </bz-tabbar>
- * <bz-tabbar v-model="selected" fixed>
- *  <bz-tab-item id="['传入数组','也可以']">
+ *  </cl-tab-item>
+ * </cl-tabbar>
+ * <cl-tabbar v-model="selected" fixed>
+ *  <cl-tab-item id="['传入数组','也可以']">
  *    <img src="http://placehold.it/100x100" slot="icon" alt=""/>
  *    <span slot="label">订单</span>
- *  </bz-tab-item>
- * </bz-tabbar>
+ *  </cl-tab-item>
+ * </cl-tabbar>
  */
 export default {
-  name: 'bz-tabbar',
+  name: 'cl-tabbar',
   props: {
     fixed: Boolean,
     value: {}
@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss">
 @import "../style/base.scss";
-.bz-tabbar {
+.cl-tabbar {
   background-image: linear-gradient(180deg, $color-grey, $color-grey 50%, transparent 50%);
   background-size: 100% .1rem;
   background-repeat: no-repeat;
@@ -61,7 +61,7 @@ export default {
     bottom: 0;
     left: 0;
   }
-  > .bz-tab-item.is-selected {
+  > .cl-tab-item.is-selected {
     background-color: $tabbar-tab-item-selected-background-color;
     color: $tabbar-tab-item-selected-color;
   }

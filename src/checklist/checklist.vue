@@ -1,20 +1,20 @@
 <template>
-  <div id="bz-checklist" @change="$emit('change', currentValue)" class="bz-checklist" :class="{ 'is-limit': max <= currentValue.length }">
-    <label class="bz-checklist-title" v-text="title"></label>
+  <div id="cl-checklist" @change="$emit('change', currentValue)" class="cl-checklist" :class="{ 'is-limit': max <= currentValue.length }">
+    <label class="cl-checklist-title" v-text="title"></label>
     <x-cell v-for="option in options" :key="option">
-      <label class="bz-checklist-label" slot="title">
-        <span :class="{'is-right': align === 'right'}" class="bz-checkbox">
-          <input class="bz-checkbox-input" type="checkbox" v-model="currentValue" :disabled="option.disabled" :value="option.value || option" value="">
-          <span class="bz-checkbox-core"></span>
+      <label class="cl-checklist-label" slot="title">
+        <span :class="{'is-right': align === 'right'}" class="cl-checkbox">
+          <input class="cl-checkbox-input" type="checkbox" v-model="currentValue" :disabled="option.disabled" :value="option.value || option" value="">
+          <span class="cl-checkbox-core"></span>
         </span>
-        <span class="bz-checkbox-label" v-text="option.label || option"></span>
+        <span class="cl-checkbox-label" v-text="option.label || option"></span>
       </label>
     </x-cell>
   </div>
 </template>
 <script>
 /**
- * bz-checklist
+ * cl-checklist
  * @desc 复选框列表，依赖 cell 组件
  * @param {(string[]|object[])} options - 选项数组，可以传入 [{label: 'label', value: 'value', disabled: true}] or ['ab', 'cd', 'ef']
  * @param {string[]} value - 选中值的数组
@@ -22,11 +22,11 @@
  * @param {number} [max] - 最多可选的个数
  * @param {string} [align=left] - checkbox 对齐位置 'left', 'right'
  * @example
- * <bz-checklist :v-model="value" :options="['a', 'b', 'c']"></bz-checklist>
+ * <cl-checklist :v-model="value" :options="['a', 'b', 'c']"></cl-checklist>
  */
 import XCell from '../cell/index'
 export default {
-  name: 'bz-checklist',
+  name: 'cl-checklist',
   props: {
     max: Number,
     title: String,
@@ -67,40 +67,40 @@ export default {
 </script>
 <style lang="scss">
 @import "../style/base.scss";
-.bz-checklist {
-  .bz-cell {
+.cl-checklist {
+  .cl-cell {
     padding: 0;
   }
 }
-.bz-checklist-label {
+.cl-checklist-label {
   display: block;
   padding: 0 1rem;
 }
-.bz-checklist-title {
+.cl-checklist-title {
   color: $checklist-title-color;
   display: block;
   font-size: 1.2rem;
   margin: .8rem;
 }
-.bz-checklist.is-limit {
-  .bz-checkbox-core:not(:checked) {
+.cl-checklist.is-limit {
+  .cl-checkbox-core:not(:checked) {
     background-color: $color-grey;
     border-color: $color-grey;
   }
 }
-.bz-checkbox {
+.cl-checkbox {
   &.is-right {
     float: right;
   }
 }
-.bz-checkbox-label {
+.cl-checkbox-label {
   vertical-align: middle;
   margin-left: .6rem;
 }
-.bz-checkbox-input {
+.cl-checkbox-input {
   display: none;
   &:checked {
-    + .bz-checkbox-core {
+    + .cl-checkbox-core {
       background-color: $color-blue;
       border-color: $color-blue;
       &::after {
@@ -111,14 +111,14 @@ export default {
   }
 }
 
-.bz-checkbox-input[disabled] {
-  + .bz-checkbox-core {
+.cl-checkbox-input[disabled] {
+  + .cl-checkbox-core {
     background-color: $color-grey;
     border-color: #ccc;
   }
 }
 
-.bz-checkbox-core {
+.cl-checkbox-core {
   display: inline-block;
   border-radius: 100%;
   border: 1px solid #ccc;
