@@ -1,12 +1,12 @@
 <template>
   <section class="page-demo">
     <div class="" v-for="item in navs">
-      <bz-cell :to="item.path" is-link>
+      <cl-cell :to="item.path" is-link>
         <div class="" slot="title">
           <i :class="['indexicon', 'icon-' + item.name]"></i>
           <span>{{item.name}}</span>
         </div>
-      </bz-cell>
+      </cl-cell>
     </div>
   </section>
 </template>

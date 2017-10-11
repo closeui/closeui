@@ -1,18 +1,18 @@
 <template>
   <div id="page-switch">
     <h2>switch</h2>
-    <bz-switch v-model='value1' @change="handleChange">
+    <cl-switch v-model='value1' @change="handleChange">
       <label v-text="value1"></label>
-    </bz-switch>
-    <bz-switch v-model="value4" @change="handleChange">
+    </cl-switch>
+    <cl-switch v-model="value4" @change="handleChange">
       <label v-text="value4"></label>
-    </bz-switch>
-    <bz-cell :title="`选项${value2}`">
-      <bz-switch v-model="value2" @change="handleChange"></bz-switch>
-    </bz-cell>
-    <bz-cell :title="`选项${value3}`">
-      <bz-switch v-model="value3" @change="handleChange"></bz-switch>
-    </bz-cell>
+    </cl-switch>
+    <cl-cell :title="`选项${value2}`">
+      <cl-switch v-model="value2" @change="handleChange"></cl-switch>
+    </cl-cell>
+    <cl-cell :title="`选项${value3}`">
+      <cl-switch v-model="value3" @change="handleChange"></cl-switch>
+    </cl-cell>
   </div>
 </template>
 <script>

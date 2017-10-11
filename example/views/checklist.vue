@@ -1,45 +1,45 @@
 <template>
   <div class="page-checklist">
     <div class="page-title">Checklist</div>
-    <bz-checklist
+    <cl-checklist
       class="page-part"
       title="复选框列表"
       v-model="value1"
       :options="options1">
-    </bz-checklist>
+    </cl-checklist>
     
     <div class="">
-      <bz-cell title="选中的项">{{ value1 }}</bz-cell>
+      <cl-cell title="选中的项">{{ value1 }}</cl-cell>
     </div>
     
-    <bz-checklist
+    <cl-checklist
       class="page-part"
       title="第二个复选框列表"
       v-model="value2"
       :options="options2">    
-    </bz-checklist>
+    </cl-checklist>
     
     <div class="">
-      <bz-cell title="选中的项">{{ value2 }}</bz-cell>
+      <cl-cell title="选中的项">{{ value2 }}</cl-cell>
     </div>
-    <bz-checklist class="page-part"
+    <cl-checklist class="page-part"
       title="最多选两个"
       :max="2"
       v-model="value3"
       :options="options3">
-    </bz-checklist>
+    </cl-checklist>
     
     <div class="">
-      <bz-cell title="选中的项">{{ value3 }}</bz-cell>
+      <cl-cell title="选中的项">{{ value3 }}</cl-cell>
     </div>
     
-    <bz-checklist
+    <cl-checklist
       align="right"
       class="page-part"
       title="右对齐"
       v-model="value4"
       :options="options4">
-    </bz-checklist>
+    </cl-checklist>
   </div>
 </template>
 <script>

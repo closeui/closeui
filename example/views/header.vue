@@ -1,6 +1,6 @@
 <template>
   <div>
-    <bz-header fixed title="固定在顶部"></bz-header>
+    <cl-header fixed title="固定在顶部"></cl-header>
   </div>
 </template>
 
