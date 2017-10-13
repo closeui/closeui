@@ -4,7 +4,7 @@
   @touchstart.native="startDrag"
   @touchmove.native="onDrag"
   @touchend.native="endDrag"
-  class="bz-cell-swipe"
+  class="cl-cell-swipe"
   :title="title"
   :icon="icon"
   :label="label"
@@ -12,12 +12,12 @@
   :is-link="isLink"
   ref="cell"
   :value="value">
-  <div class="bz-cell-swipe-buttongroup" slot="right" ref="right">
-    <a class="bz-cell-swipe-button" v-for="btn in right" :style="btn.style" @click.stop="btn.handler && btn.handler(), swipeMove()" v-html="btn.content">  
+  <div class="cl-cell-swipe-buttongroup" slot="right" ref="right">
+    <a class="cl-cell-swipe-button" v-for="btn in right" :style="btn.style" @click.stop="btn.handler && btn.handler(), swipeMove()" v-html="btn.content">  
     </a>
   </div>
-  <div class="bz-cell-swipe-buttongroup" slot="left" ref="left">
-    <a class="bz-cell-swipe-button" v-for="btn in left" :style="btn.style" @click.stop="btn.handler && btn.handler(), swipeMove()" v-html="btn.content">  
+  <div class="cl-cell-swipe-buttongroup" slot="left" ref="left">
+    <a class="cl-cell-swipe-button" v-for="btn in left" :style="btn.style" @click.stop="btn.handler && btn.handler(), swipeMove()" v-html="btn.content">  
     </a>
   </div>
   <slot></slot>
@@ -32,19 +32,19 @@
 
 <script>
 /**
- * bz-cell-swipe
+ * cl-cell-swipe
  * @desc 类似ios 滑动cell 效果
- * <bz-cell-swipe
+ * <cl-cell-swipe
  *  :left=[{content: 'text', style: {color: 'white', backgroundColor: 'red'}, handler(e) => console.log(test)}]
  *  :right=[{content: 'allowed HTML'}]>
  *  swipe test
- * </bz-cell-swipe>
+ * </cl-cell-swipe>
  */
 import XCell from '../cell/index'
 import { once } from '../utils/dom'
 import Clickoutside from '../utils/clickoutside'
 export default {
-  name: 'bz-cell-swipe',
+  name: 'cl-cell-swipe',
   props: {
     to: String,
     left: Array,
@@ -62,7 +62,7 @@ export default {
   },
   computed: {},
   mounted () {
-    this.wrap = this.$refs.cell.$el.querySelector('.bz-cell-wrapper')
+    this.wrap = this.$refs.cell.$el.querySelector('.cl-cell-wrapper')
     this.leftElm = this.$refs.left
     this.rightElm = this.$refs.right
     this.leftWrapElm = this.leftElm.parentNode
@@ -162,20 +162,20 @@ export default {
 <style lang="scss">
 @import "../style/base.scss";
 
-.bz-cell-swipe-buttongroup {
+.cl-cell-swipe-buttongroup {
   height: 100%;
 }
-.bz-cell-swipe-button {
+.cl-cell-swipe-button {
   height: 100%;
   display: inline-block;
   padding: 0 1rem;
   line-height: 4.8rem;
 }
-.bz-cell-wrapper {
+.cl-cell-wrapper {
   position: relative;
 }
 
-.bz-cell-wrapper, .bz-cell-left, .bz-cell-right {
+.cl-cell-wrapper, .cl-cell-left, .cl-cell-right {
   transition: transform 150ms ease-in-out;
 }
 </style>

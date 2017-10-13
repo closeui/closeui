@@ -1,10 +1,10 @@
 <template>
-  <div id="double-bounce" class="bz-spinner-double-bounce" :style="{
+  <div id="double-bounce" class="cl-spinner-double-bounce" :style="{
     width: spinnerSize,
     height: spinnerSize
     }">
-    <div class="bz-spinner-double-bounce-bounce1" :style="{ backgroundColor: spinnerColor }"></div>
-    <div class="bz-spinner-double-bounce-bounce2" :style="{ backgroundColor: spinnerColor }"></div>
+    <div class="cl-spinner-double-bounce-bounce1" :style="{ backgroundColor: spinnerColor }"></div>
+    <div class="cl-spinner-double-bounce-bounce2" :style="{ backgroundColor: spinnerColor }"></div>
   </div>
 </template>
 <script>
@@ -20,9 +20,9 @@ export default {
 }
 </script>
 <style lang="scss">
-.bz-spinner-double-bounce {
+.cl-spinner-double-bounce {
   position: relative;
-  .bz-spinner-double-bounce-bounce1, .bz-spinner-double-bounce-bounce2 {
+  .cl-spinner-double-bounce-bounce1, .cl-spinner-double-bounce-bounce2 {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -30,14 +30,14 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    animation: bz-spinner-double-bounce 2.0s infinite ease-in-out;
+    animation: cl-spinner-double-bounce 2.0s infinite ease-in-out;
   }
-  .bz-spinner-double-bounce-bounce2 {
+  .cl-spinner-double-bounce-bounce2 {
     animation-delay: -1.0s;
   }
 }
 
-@keyframes bz-spinner-double-bounce {
+@keyframes cl-spinner-double-bounce {
   0%, 100% {
     transform: scale(0.0);
   }

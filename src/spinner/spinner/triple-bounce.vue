@@ -1,9 +1,9 @@
 <template>
   <div id="triple-bounce">
-    <div class="bz-spinner-triple-bounce">
-      <div class="bz-spinner-triple-bounce-bounce1" :style="bounceStyle"></div>
-      <div class="bz-spinner-triple-bounce-bounce2" :style="bounceStyle"></div>
-      <div class="bz-spinner-triple-bounce-bounce3" :style="bounceStyle"></div>
+    <div class="cl-spinner-triple-bounce">
+      <div class="cl-spinner-triple-bounce-bounce1" :style="bounceStyle"></div>
+      <div class="cl-spinner-triple-bounce-bounce2" :style="bounceStyle"></div>
+      <div class="cl-spinner-triple-bounce-bounce3" :style="bounceStyle"></div>
     </div>
   </div>
 </template>
@@ -32,20 +32,20 @@ export default {
 }
 </script>
 <style lang="scss">
-.bz-spinner-triple-bounce {
-  .bz-spinner-triple-bounce-bounce1, .bz-spinner-triple-bounce-bounce2, .bz-spinner-triple-bounce-bounce3 {
+.cl-spinner-triple-bounce {
+  .cl-spinner-triple-bounce-bounce1, .cl-spinner-triple-bounce-bounce2, .cl-spinner-triple-bounce-bounce3 {
     border-radius: 100%;
     display: inline-block;
-    animation: bz-spinner-double-bounce 1.4s infinite ease-in-out both;
+    animation: cl-spinner-double-bounce 1.4s infinite ease-in-out both;
   }
-  .bz-spinner-triple-bounce-bounce1 {
+  .cl-spinner-triple-bounce-bounce1 {
     animation-delay: -0.32s;
   }
-  .bz-spinner-triple-bounce-bounce2 {
+  .cl-spinner-triple-bounce-bounce2 {
     animation-delay: -0.16s;
   }
 }
-@keyframes bz-spinner-triple-bounce {
+@keyframes cl-spinner-triple-bounce {
   0%, 80%, 100% {
     transform: scale(0);
   }

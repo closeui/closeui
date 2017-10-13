@@ -1,12 +1,12 @@
 <template lang="html">
-  <div class="bz-tab-container"
+  <div class="cl-tab-container"
   @touchstart="startDrag"
   @mousedown="startDrag"
   @touchmove="onDrag"
   @mousemove="onDrag"
   @mouseleave="endDrag"
   @touchend="endDrag">
-    <div class="bz-tab-container-wrap" ref="wrap">
+    <div class="cl-tab-container-wrap" ref="wrap">
       <slot></slot>
     </div>
   </div>
@@ -14,18 +14,18 @@
 
 <script>
 /**
- * bz-tab-container
+ * cl-tab-container
  * 搭配tab-container-item 使用
  * @param {number|string} [value] - 当前激活的tabId
  * @example
- * <bz-tab-container v-model="selectd">
- *  <bz-tab-container-item id="2">内容</bz-tab-container-item>
- * </bz-tab-container>
+ * <cl-tab-container v-model="selectd">
+ *  <cl-tab-container-item id="2">内容</cl-tab-container-item>
+ * </cl-tab-container>
  */
 import { once } from '../utils/dom'
 import arrayFindIndex from 'array-find-index'
 export default {
-  name: 'bz-tab-container',
+  name: 'cl-tab-container',
   props: {
     value: {},
     swipeable: Boolean
@@ -139,11 +139,11 @@ export default {
 </script>
 
 <style lang="scss">
-.bz-tab-container {
+.cl-tab-container {
   overflow: hidden;
   position: relative;
 }
-.bz-tab-container-wrap {
+.cl-tab-container-wrap {
   display: flex;
 }
 .swipe-transition {

@@ -1,9 +1,9 @@
 <template>
-  <div id="fading-circle" :class="['bz-spinner-fading-circle circle-color-' + _uid]" :style="{
+  <div id="fading-circle" :class="['cl-spinner-fading-circle circle-color-' + _uid]" :style="{
     width: spinnerSize,
     height: spinnerSize
     }">
-    <div v-for="n in 12" :class="['is-circle' + (n + 1)]" class="bz-spinner-fading-circle-circle"></div>
+    <div v-for="n in 12" :class="['is-circle' + (n + 1)]" class="cl-spinner-fading-circle-circle"></div>
   </div>
 </template>
 <script>
@@ -34,10 +34,10 @@ export default {
 }
 </script>
 <style lang="scss">
-.bz-spinner-fading-circle {
+.cl-spinner-fading-circle {
   position: relative;
 }
-.bz-spinner-fading-circle-circle {
+.cl-spinner-fading-circle-circle {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -50,7 +50,7 @@ export default {
     width: 15%;
     height: 15%;
     border-radius: 100%;
-    animation: bz-fading-circle 1.2s infinite ease-in-out both;
+    animation: cl-fading-circle 1.2s infinite ease-in-out both;
   }
   $item: 12;
   @for $i from 2 through $item {
@@ -64,7 +64,7 @@ export default {
 }
 
 
-@keyframes bz-fading-circle {
+@keyframes cl-fading-circle {
   0%, 39%, 100% {
     opacity: 0;
   }

@@ -1,14 +1,14 @@
 <template>
-  <div class="bz-search">
-    <div class="bz-searchbar">
-      <div class="bz-searchbar-inner">
+  <div class="cl-search">
+    <div class="cl-searchbar">
+      <div class="cl-searchbar-inner">
         <i class="bzui bzui-search"></i>
-        <input type="search" ref="input" @click="visible = true" v-model="currentValue" :placeholder="placeholder" class="bz-searchbar-core">
+        <input type="search" ref="input" @click="visible = true" v-model="currentValue" :placeholder="placeholder" class="cl-searchbar-core">
       </div>
-      <a @click="visible = false, currentValue = ''" v-show="visible" v-text="cancelText" class="bz-searchbar-cancel"></a>
+      <a @click="visible = false, currentValue = ''" v-show="visible" v-text="cancelText" class="cl-searchbar-cancel"></a>
     </div>
-    <div class="bz-search-list" v-show="show || currentValue">
-      <div class="bz-search-list-wrap">
+    <div class="cl-search-list" v-show="show || currentValue">
+      <div class="cl-search-list-wrap">
         <slot>
           <x-cell v-for="(item, index) in result" :key="index" :title="item"></x-cell>
         </slot>
@@ -19,7 +19,7 @@
 <script>
 import XCell from '../cell'
 /**
- * bz-search
+ * cl-search
  * @param {string} value - 绑定值
  * @param {string} [cancel-text=取消] - 取消按钮文字
  * @param {string} [placeholder] - 搜索框占位内容
@@ -27,13 +27,13 @@ import XCell from '../cell'
  * @param {boolean} [show=false] - 始终显示列表
  * @param {string[]} [result] - 结果列表
  * @param {slot} 结果列表
- * <bz-search :value="value" :result="result"></bz-search>
- * <bz-search :value="value">
- *    <bz-cell v-for="item in result" :title="item"></bz-cell>
- * </bz-search>
+ * <cl-search :value="value" :result="result"></cl-search>
+ * <cl-search :value="value">
+ *    <cl-cell v-for="item in result" :title="item"></cl-cell>
+ * </cl-search>
  */
 export default {
-  name: 'bz-search',
+  name: 'cl-search',
   props: {
     value: String,
     autofocus: Boolean,
@@ -70,11 +70,11 @@ export default {
 </script>
 <style lang="scss">
 @import "../style/base.scss";
-.bz-search {
+.cl-search {
   width: 100%;
   height: 100vh;
 }
-.bz-searchbar {
+.cl-searchbar {
   position: relative;
   align-items: center;
   background-color: $color-grey;
@@ -83,7 +83,7 @@ export default {
   padding: .8rem 1rem;
   z-index: 1;
 }
-.bz-searchbar-inner {
+.cl-searchbar-inner {
   align-items: center;
   background-color: $color-white;
   border-radius: .2rem;
@@ -96,7 +96,7 @@ export default {
     color: $color-grey;
   }
 }
-.bz-searchbar-core {
+.cl-searchbar-core {
   appearance:none;
   border: 0;
   box-sizing: border-box;
@@ -104,12 +104,12 @@ export default {
   height: 100%;
   outline: 0;
 }
-.bz-searchbar-cancel {
+.cl-searchbar-cancel {
   color: $color-blue;
   margin-left: 1rem;
   text-decoration: none;
 }
-.bz-search-list {
+.cl-search-list {
   overflow: auto;
   padding-top: 4.4rem;
   position: absolute;

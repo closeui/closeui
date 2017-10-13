@@ -1,21 +1,21 @@
 <template>
-  <label class="bz-switch">
-    <input type="checkbox" v-model="currentValue" class="bz-switch-input" @change="$emit('change', currentValue)">
-    <span class="bz-switch-core"></span>
-    <div class="bz-switch-label"><slot></slot></div>
+  <label class="cl-switch">
+    <input type="checkbox" v-model="currentValue" class="cl-switch-input" @change="$emit('change', currentValue)">
+    <span class="cl-switch-core"></span>
+    <div class="cl-switch-label"><slot></slot></div>
   </label>
 </template>
 <script>
 /**
- * bz-switch
+ * cl-switch
  * @desc 切换按钮
  * @param {boolean} [value] - 绑定值
  * @param {slot} - 显示内容
  * @example
- * <bz-switch v-model="value"></bz-switch>
+ * <cl-switch v-model="value"></cl-switch>
  */
 export default {
-  name: 'bz-switch',
+  name: 'cl-switch',
   props: {
     value: Boolean
   },
@@ -43,7 +43,7 @@ export default {
 </script>
 <style lang="scss">
 @import '../style/base.scss';
-.bz-switch {
+.cl-switch {
   display: flex;
   align-items: center;
   position: relative;
@@ -51,14 +51,14 @@ export default {
     pointer-events: none;
   }
 }
-.bz-switch-label {
+.cl-switch-label {
   margin-left: 1rem;
   display: inline-block;
   &:empty {
     margin-left: 0;
   }
 }
-.bz-switch-core {
+.cl-switch-core {
   display: inline-block;
   position: relative;
   width: 5.2rem;
@@ -87,10 +87,10 @@ export default {
     background-color: #fdfdfd;
   }
 }
-.bz-switch-input {
+.cl-switch-input {
   display: none;
   &:checked {
-    + .bz-switch-core {
+    + .cl-switch-core {
       border-color: $color-blue;
       background-color: $color-blue;
       &::before {

@@ -1,10 +1,10 @@
 <template lang="html">
-  <header class="bz-header" :class="{'is-fixed': fixed}">
-    <div class="bz-header-button is-left">
+  <header class="cl-header" :class="{'is-fixed': fixed}">
+    <div class="cl-header-button is-left">
       <slot name="left"></slot>
     </div>
-    <h1 class="bz-header-title" v-text="title"></h1>
-    <div class="bz-header-button is-right">
+    <h1 class="cl-header-title" v-text="title"></h1>
+    <div class="cl-header-button is-right">
       <slot name="right"></slot>
     </div>
   </header>
@@ -12,20 +12,20 @@
 
 <script>
 /**
- * bz-header
+ * cl-header
  * @desc 顶部导航
  * @param {boolean} [fixed=false] - 固定顶部
  * @param {string} [title] - 标题
  * @param {slot} [left] - 显示在左侧区域
  * @param {slot} [right] - 显示在右侧区域
  * @example
- * <bz-header title="这里是标题" fixed>
- *  <bz-button slot="left" icon="back">返回</bz-button>
- *  <bz-button slot="right" icon="more">返回</bz-button>
- * </bz-header>
+ * <cl-header title="这里是标题" fixed>
+ *  <cl-button slot="left" icon="back">返回</cl-button>
+ *  <cl-button slot="right" icon="more">返回</cl-button>
+ * </cl-header>
  */
 export default {
-  name: 'bz-header',
+  name: 'cl-header',
   props: {
     fixed: Boolean,
     title: String
@@ -35,7 +35,7 @@ export default {
 
 <style lang="scss">
 @import "../style/base.scss";
-.bz-header {
+.cl-header {
   align-items: center;
   background-color: $color-blue;
   box-sizing: border-box;
@@ -48,7 +48,7 @@ export default {
   position: relative;
   text-align: center;
   white-space: nowrap;
-  .bz-button {
+  .cl-button {
     background-color: transparent;
     border: 0;
     box-shadow: none;
@@ -61,7 +61,7 @@ export default {
     }
   }
   
-  .bz-header-button {
+  .cl-header-button {
     flex: .5;
     
     > a {
@@ -76,7 +76,7 @@ export default {
     }
   }
   
-  .bz-header-title {
+  .cl-header-title {
     font-size: inherit;
     font-weight: normal;
     flex: 1;
