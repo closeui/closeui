@@ -1,22 +1,22 @@
 <template lang="html">
   <button 
   :type="nativeType"
-  class="bz-button"
-  :class="['bz-button--' + type, 'bz-button--' + size, {'is-disabled': disabled, 'is-plain': plain}]"
+  class="cl-button"
+  :class="['cl-button--' + type, 'cl-button--' + size, {'is-disabled': disabled, 'is-plain': plain}]"
   @click="handleClick"
   :disabled="disabled">
-    <span class="bz-button-icon" v-if="icon || $slots.icon">
+    <span class="cl-button-icon" v-if="icon || $slots.icon">
       <slot name="icon">
         <i class="bzui" :class="'bzui-' + icon" v-if="icon"></i>
       </slot>
     </span>
-    <label class="bz-button-text"><slot></slot></label>
+    <label class="cl-button-text"><slot></slot></label>
   </button>
 </template>
 
 <script>
 /**
- * bz-button
+ * cl-button
  * @param {string} [type=default] - 显示类型，接受 default, primary, danger
  * @param {boolean} [disabled=false] - 禁用
  * @param {boolean} [plain=false] - 幽灵按钮
@@ -27,10 +27,10 @@
  * @param {slot} [icon] 显示图标
  *
  * @example
- * <bz-button size="large" icon="back" type="primary">button</bz-button>
+ * <cl-button size="large" icon="back" type="primary">button</cl-button>
  */
 export default {
-  name: 'bz-button',
+  name: 'cl-button',
   props: {
     icon: String,
     disabled: Boolean,
@@ -75,7 +75,7 @@ export default {
 
 <style lang="scss">
 @import "../style/base.scss";
-.bz-button {
+.cl-button {
   appearance: none;
   border-radius: .4rem;
   border: 0;
@@ -107,11 +107,11 @@ export default {
   } 
 }
 
-.bz-button-icon {
+.cl-button-icon {
   vertical-align: middle;
   display: inline-block;
 }
-.bz-button--default {
+.cl-button--default {
   color: $button-default-color;
   background-color: $button-default-background-color;
   box-shadow: $button-default-box-shadow;
@@ -122,7 +122,7 @@ export default {
     color: $button-default-plain-color;
   }
 }
-.bz-button--primary {
+.cl-button--primary {
   color: $button-primary-color;
   background-color: $button-primary-background-color;
   &.is-plain {
@@ -131,7 +131,7 @@ export default {
     color: $button-primary-background-color;
   }
 }
-.bz-button--danger {
+.cl-button--danger {
   color: $button-danger-color;
   background-color: $button-danger-background-color;
   &.is-plain {
@@ -141,15 +141,15 @@ export default {
   }
 }
 
-.bz-button--large {
+.cl-button--large {
   display: block;
   width: 100%;
 }
-.bz-button--nomal {
+.cl-button--nomal {
   display: inline-block;
   padding: 0 1.2rem;
 }
-.bz-button--small {
+.cl-button--small {
   display: inline-block;
   font-size: 1.4rem;
   padding: 0 1.2rem;
