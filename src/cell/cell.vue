@@ -44,18 +44,15 @@ export default {
   },
   computed: {
     href () {
-      if (this.to && !this.added && this.$router) {
+      if (typeof this.to === 'string') {
+        return this.to
+      } else if (typeof this.to === 'object') {
         const resolved = this.$router.match(this.to)
-        if (!resolved.matched.length) {
-          return this.to
-        }
         this.$nextTick(() => {
-          this.added = true
           this.$el.addEventListener('click', this.handleClick)
         })
         return resolved.path
       }
-      return this.to
     }
   },
   ready: function () {},
@@ -161,6 +158,7 @@ export default {
   top: 0;
   transform: translate3d(100%, 0, 0);
 }
+
 .cl-cell-allow-right::after {
   border: 2px solid $border-color;
   border-bottom-width: 0;

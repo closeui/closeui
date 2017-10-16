@@ -7,7 +7,7 @@
   :disabled="disabled">
     <span class="cl-button-icon" v-if="icon || $slots.icon">
       <slot name="icon">
-        <i class="bzui" :class="'bzui-' + icon" v-if="icon"></i>
+        <i class="cl-icon" :class="'ion-' + icon" v-if="icon"></i>
       </slot>
     </span>
     <label class="cl-button-text"><slot></slot></label>

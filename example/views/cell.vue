@@ -16,9 +16,18 @@
     
     <cl-cell-group class="clui-cell-group">
       <cl-cell title="标题文字" is-link value="链接"></cl-cell>
-      <cl-cell title="标题文字">
-        <cl-button size="small" type="primary" icon="back">按钮</cl-button>
+      <cl-cell title="标题文字" is-link>
+        <span style="color: green;">这里是元素</span>
       </cl-cell>
+      <cl-cell title="标题文字">
+        <cl-button size="small" type="primary" icon="chevron-left">按钮</cl-button>
+      </cl-cell>  
+    </cl-cell-group>
+    
+    <cl-cell-group class="clui-cell-group">
+      <cl-cell title="标题文字" label="描述信息" is-link></cl-cell>
+      <cl-cell title="原生跳转" label="跳转到 https://github.com" to="https://github.com" is-link></cl-cell>
+      <cl-cell title="路由跳转" label="跳转到 /#/header" :to="{name: 'header'}" is-link></cl-cell>
     </cl-cell-group>
     
   </div>
