@@ -7,7 +7,7 @@
     <div class="cl-cell-wrapper">
       <div class="cl-cell-title">
         <slot name="icon">
-          <i v-if="icon" class="clui" :class="'ion-' + icon"></i>
+          <i v-if="icon" class="cl-icon" :class="'ion-' + icon"></i>
         </slot>
         <slot name="title">
           <span class="cl-cell-text" v-text="title"></span>
@@ -162,15 +162,15 @@ export default {
   transform: translate3d(100%, 0, 0);
 }
 .cl-cell-allow-right::after {
-  border: .2rem solid $border-color;
+  border: 2px solid $border-color;
   border-bottom-width: 0;
   border-left-width: 0;
   content: '';
   position: absolute;
   top: 50%;
   right: 2rem;
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   transform: translateY(-50%) rotate(45deg);
 }
 </style>

@@ -7,7 +7,7 @@
       <ul class="demo-nav-group__list" :class="{'demo-nav-group__list--open': isOpen}">
         <template v-for="(navItem, index) in group.list">
           <li :key="index" class="demo-nav-group__title" v-if="!navItem.disabled">
-            <router-link active-class="active" :to="base + navItem.path">
+            <router-link active-class="active" :to="navItem.path">
               <p>{{navItem.title}}</p>
             </router-link>
           </li>

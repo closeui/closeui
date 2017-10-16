@@ -4,6 +4,7 @@ import Vue from 'vue'
 import Header from './header'
 import Button from './button'
 import Cell from './cell'
+import CellGroup from './cell-group'
 import CellSwipe from './cell-swipe'
 import TabItem from './tab-item'
 import Tabbar from './tabbar'
@@ -19,6 +20,7 @@ const components = {
   Header,
   Button,
   Cell,
+  CellGroup,
   CellSwipe,
   TabItem,
   Tabbar,

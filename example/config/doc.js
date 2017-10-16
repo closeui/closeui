@@ -17,7 +17,7 @@ module.exports = {
             },
             {
               'path': '/cell',
-              'title': '单元格'
+              'title': 'Cell 单元格'
             }
           ]
         },
