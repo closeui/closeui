@@ -7,7 +7,7 @@
     <div class="cl-cell-wrapper">
       <div class="cl-cell-title">
         <slot name="icon">
-          <i v-if="icon" class="bzui" :class="'bzui-' + icon"></i>
+          <i v-if="icon" class="clui" :class="'ion-' + icon"></i>
         </slot>
         <slot name="title">
           <span class="cl-cell-text" v-text="title"></span>
@@ -28,10 +28,6 @@
 </template>
 
 <script>
-/**
- * cl-cell
- * @param
- */
 export default {
   name: 'cl-cell',
   props: {

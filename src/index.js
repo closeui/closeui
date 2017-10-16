@@ -1,5 +1,5 @@
 import './style/base.scss'
-import './style/font/iconfont.css'
+import './style/icon/ionicons.css'
 import Vue from 'vue'
 import Header from './header'
 import Button from './button'

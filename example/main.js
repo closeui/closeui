@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// import './config/rem'
 import { install as CloseUI } from 'src/index'
 
 Vue.use(CloseUI)

@@ -7,5 +7,6 @@
 <script>
 </script>
 
-<style>
+<style lang="scss">
+@import './assets/scss/main';
 </style>

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import DemoList from './views/demolist'
 import Demo from './views/demos'
 import Header from './views/header'
 import Button from './views/button'
@@ -18,7 +19,7 @@ Vue.use(Router)
 const router = new Router({
   mode: 'hash',
   routes: [
-    { path: '/', component: Demo, name: 'demo' },
+    { path: '/', component: DemoList, name: 'demolist' },
     { path: '/header', component: Header, name: 'header' },
     { path: '/button', component: Button, name: 'button' },
     { path: '/cell', component: Cell, name: 'cell' },
