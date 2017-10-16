@@ -23,7 +23,7 @@
     <div class="cl-cell-right">
       <slot name="right"></slot>
     </div>
-    <i class="cl-cell-allow-right" v-if="isLink"></i>
+    <i class="ion-chevron-right cl-cell-right__arrow-icon" v-if="isLink"></i>
   </a>
 </template>
 
@@ -170,5 +170,13 @@ export default {
   width: 6px;
   height: 6px;
   transform: translateY(-50%) rotate(45deg);
+}
+
+.cl-cell-right__arrow-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  color: #999;
 }
 </style>

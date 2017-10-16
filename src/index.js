@@ -6,6 +6,8 @@ import Button from './button'
 import Cell from './cell'
 import CellGroup from './cell-group'
 import CellSwipe from './cell-swipe'
+import Col from './col'
+import Row from './row'
 import TabItem from './tab-item'
 import Tabbar from './tabbar'
 import TabContainerItem from './tab-container-item'
@@ -22,6 +24,8 @@ const components = {
   Cell,
   CellGroup,
   CellSwipe,
+  Col,
+  Row,
   TabItem,
   Tabbar,
   TabContainerItem,
