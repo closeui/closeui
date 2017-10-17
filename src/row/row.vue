@@ -6,7 +6,7 @@
 </template>
 <script>
 export default {
-  name: 'cl-col',
+  name: 'cl-row',
   props: {
     prefix: {
       type: String,
@@ -35,5 +35,12 @@ export default {
   components: {}
 }
 </script>
-<style>
+<style lang="scss">
+.cl-row {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
 </style>

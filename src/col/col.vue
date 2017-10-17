@@ -36,5 +36,17 @@ export default {
   components: {}
 }
 </script>
-<style>
+<style lang="scss">
+.cl-col {
+  float: left;
+}
+
+@for $i from 1 to 24 {
+  .cl-col-#{$i} {
+    width: $i * 100% / 24
+  }
+  .cl-col-offset-#{$i} {
+    margin-left: $i * 100% / 24;
+  }
+}
 </style>

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import DemoList from './views/demolist'
 import Demo from './views/demos'
+import Layout from './views/layout'
 import Header from './views/header'
 import Button from './views/button'
 import Cell from './views/cell'
@@ -20,6 +21,7 @@ const router = new Router({
   mode: 'hash',
   routes: [
     { path: '/', component: DemoList, name: 'demolist' },
+    { path: '/layout', component: Layout, name: 'layout' },
     { path: '/header', component: Header, name: 'header' },
     { path: '/button', component: Button, name: 'button' },
     { path: '/cell', component: Cell, name: 'cell' },
