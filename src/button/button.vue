@@ -10,6 +10,9 @@
         <i class="cl-icon" :class="'ion-' + icon" v-if="icon"></i>
       </slot>
     </span>
+    <span class="cl-button-icon" v-if="loading">
+      <i class="cl-icon__loading icon-loader ion-load-d"></i>
+    </span>
     <label class="cl-button-text"><slot></slot></label>
   </button>
 </template>
@@ -36,6 +39,14 @@ export default {
     disabled: Boolean,
     nativeType: String,
     plain: Boolean,
+    loading: {
+      type: Boolean,
+      default: false
+    },
+    circle: {
+      type: Boolean,
+      default: false
+    },
     type: {
       type: String,
       default: 'default',
@@ -43,20 +54,14 @@ export default {
         return [
           'default',
           'danger',
-          'primary'
+          'primary',
+          'warning'
         ].indexOf(value) > -1
       }
     },
     size: {
       type: String,
-      default: 'normal',
-      validator (value) {
-        return [
-          'small',
-          'normal',
-          'large'
-        ].indexOf(value) > -1
-      }
+      default: 'normal'
     }
   },
   data: function () {
@@ -82,7 +87,8 @@ export default {
   color: inherit;
   display: block;
   font-size: 1.8rem;
-  height: 4.1rem;
+  padding: $btn-padding-base;
+  line-height: 1.5;
   outline: 0;
   overflow: hidden;
   position: relative;
@@ -108,8 +114,12 @@ export default {
 }
 
 .cl-button-icon {
-  vertical-align: middle;
   display: inline-block;
+}
+.cl-button.is-plain {
+  &::after {
+    background-color: rgb(229, 229, 229);
+  }
 }
 .cl-button--default {
   color: $button-default-color;
@@ -140,7 +150,15 @@ export default {
     color: $button-danger-background-color;
   }
 }
-
+.cl-button--warning {
+  color: $button-warning-color;
+  background-color: $button-warning-background-color;
+  &.is-plain {
+    border: .1rem solid $button-warning-background-color;
+    background-color: transparent;
+    color: $button-warning-background-color;
+  }
+}
 .cl-button--large {
   display: block;
   width: 100%;
@@ -154,6 +172,21 @@ export default {
   font-size: 1.4rem;
   padding: 0 1.2rem;
   height: 3.3rem;
+}
+
+.cl-icon__loading {
+  display: inline-block;
+  line-height: 1;
+  animation: loadingCircle 1s linear infinite;
+}
+
+@keyframes loadingCircle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 </style>

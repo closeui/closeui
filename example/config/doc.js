@@ -16,6 +16,10 @@ module.exports = {
               'title': 'Header 头部'
             },
             {
+              'path': '/button',
+              'title': 'Button 按钮'
+            },
+            {
               'path': '/cell',
               'title': 'Cell 单元格'
             }
