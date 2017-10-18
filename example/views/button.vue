@@ -13,6 +13,7 @@
       <cl-button type="danger" size="small">danger</cl-button>
       <cl-button type="danger" icon="search">danger</cl-button>
       <cl-button type="primary" icon="search"></cl-button>
+      <cl-button type="warning" icon="search" circle></cl-button>
       <cl-button type="primary" loading></cl-button>
       <cl-button disabled size="large">default</cl-button>
       <cl-button disabled size="large" type="primary">primary</cl-button>

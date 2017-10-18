@@ -2,7 +2,7 @@
   <button 
   :type="nativeType"
   class="cl-button"
-  :class="['cl-button--' + type, 'cl-button--' + size, {'is-disabled': disabled, 'is-plain': plain}]"
+  :class="['cl-button--' + type, 'cl-button--' + size, {'is-disabled': disabled, 'is-plain': plain, 'is-circle': circle}]"
   @click="handleClick"
   :disabled="disabled">
     <span class="cl-button-icon" v-if="icon || $slots.icon">
@@ -61,7 +61,15 @@ export default {
     },
     size: {
       type: String,
-      default: 'normal'
+      default: 'normal',
+      validator (value) {
+        return [
+          'normal',
+          'small',
+          'middle',
+          'large'
+        ].indexOf(value) > -1
+      }
     }
   },
   data: function () {
@@ -116,9 +124,16 @@ export default {
 .cl-button-icon {
   display: inline-block;
 }
-.cl-button.is-plain {
-  &::after {
-    background-color: rgb(229, 229, 229);
+.cl-button {
+  &.is-plain {
+    &::after {
+      background-color: rgb(229, 229, 229);
+    }
+  }
+  &.is-circle {
+    border-radius: 50%;
+    padding: 0;
+    @include size($btn-circle-size-sm);
   }
 }
 .cl-button--default {
