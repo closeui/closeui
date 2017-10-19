@@ -31,6 +31,10 @@ module.exports = {
             {
               'path': '/checkbox',
               'title': 'Checkbox 复选框'
+            },
+            {
+              'path': '/field',
+              'title': 'Field 输入框'
             }
           ]
         },

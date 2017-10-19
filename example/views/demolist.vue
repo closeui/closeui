@@ -49,7 +49,7 @@ export default {
       content: '';
       width: 42px;
       height: 42px;
-      background-image: url('https://ws1.sinaimg.cn/large/e0653793gy1fkjxwennkij20ea0f0glw.jpg');
+      background-image: url('https://ws1.sinaimg.cn/large/e0653793gy1fkm6sum7vgj205k05kmx0.jpg');
       background-size: 42px 42px;
       position: absolute;
       left: 40px;

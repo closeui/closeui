@@ -15,6 +15,7 @@ import Spinner from './views/spinner'
 import Search from './views/search'
 import Switch from './views/switch'
 import CheckList from './views/checklist'
+import Field from './views/field'
 Vue.use(Router)
 
 const router = new Router({
@@ -33,6 +34,7 @@ const router = new Router({
     { path: '/search', component: Search, name: 'search' },
     { path: '/switch', component: Switch, name: 'switch' },
     { path: '/checklist', component: CheckList, name: 'checklist' },
+    { path: '/field', component: Field, name: 'field' },
     { path: '*', redirect: '/' }
   ]
 })

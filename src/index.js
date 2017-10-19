@@ -17,6 +17,7 @@ import Spinner from './spinner'
 import Search from './search'
 import Switch from './switch'
 import CheckList from './checklist'
+import Field from './field'
 
 const components = {
   Header,
@@ -34,7 +35,8 @@ const components = {
   Spinner,
   Search,
   Switch,
-  CheckList
+  CheckList,
+  Field
 }
 
 const install = function () {

@@ -95,7 +95,7 @@ export default {
   color: inherit;
   display: block;
   font-size: 1.8rem;
-  padding: $btn-padding-base;
+  padding: $btn-padding-md;
   line-height: 1.5;
   outline: 0;
   overflow: hidden;
