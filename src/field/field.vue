@@ -1,5 +1,9 @@
 <template>
-  <cl-cell class="cl-field" :title="label" :class="[{'is-textarea': type === 'textarea', 'is-nolabel': !label}]">
+  <cl-cell
+    class="cl-field"
+    :required="required"
+    :title="label"
+    :class="[{'is-textarea': type === 'textarea', 'is-nolabel': !label, 'is-autosize': autosize}]">
     <textarea
       v-if="type === 'textarea'"
       v-model="currentValue"
@@ -51,6 +55,8 @@ export default {
     rows: String,
     label: String,
     placeholder: String,
+    required: Boolean,
+    autosize: Boolean,
     readonly: Boolean,
     disabled: Boolean,
     clearable: Boolean,
@@ -69,8 +75,25 @@ export default {
   },
   beforeCreate () {},
   created () {},
-  mounted () {},
+  mounted () {
+    if (this.autosize && this.type === 'textarea') {
+      const el = this.$refs.textarea
+      el.style.height = el.scrollHeight + 'px'
+      el.style.overflowY = 'hidden'
+    }
+  },
   computed: {},
+  watch: {
+    value (val) {
+      this.currentValue = val
+      if (this.autosize && this.type === 'textarea') {
+        this.$nextTick(this.adjustSize)
+      }
+    },
+    currentValue (val) {
+      this.$emit('input', val)
+    }
+  },
   methods: {
     handleInput (e) {
       this.currentValue = e.target.value
@@ -81,14 +104,11 @@ export default {
       } else {
         this.currentValue = ''
       }
-    }
-  },
-  watch: {
-    value (val) {
-      this.currentValue = val
     },
-    currentValue (val) {
-      this.$emit('input', val)
+    adjustSize () {
+      const el = this.$refs.textarea
+      el.style.height = 'auto'
+      el.style.height = el.scrollHeight + 'px'
     }
   },
   components: {

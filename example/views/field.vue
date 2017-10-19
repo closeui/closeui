@@ -9,7 +9,7 @@
       </div>
       
       <div class="field-box">
-        <cl-field placeholder="留言" type="text"></cl-field>
+        <cl-field placeholder="留言" type="text" v-model="remark"></cl-field>
         <cl-field placeholder="文本域" type="textarea" rows="4"></cl-field>
       </div>
       
@@ -17,6 +17,10 @@
         <cl-field label="验证码" placeholder="输入验证码">
           <div class="cl-field-ft">获取验证码</div>
         </cl-field>
+      </div>
+      
+      <div class="field-box">
+        <cl-field label="高度" placeholder="自适应" v-model="autoText" type="textarea" rows="1" autosize></cl-field>
       </div>
     </div>
   </div>
@@ -26,7 +30,8 @@ export default {
   name: '',
   data () {
     return {
-
+      remark: '',
+      autoText: ''
     }
   },
   beforeCreate () {},
