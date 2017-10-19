@@ -4,7 +4,7 @@
     <div class="page-body">
       <div class="field-box">
         <cl-field label="用户名" placeholder="请输入用户名" clearable></cl-field>
-        <cl-field label="邮箱" placeholder="请输入邮箱" type="email"></cl-field>
+        <cl-field label="邮箱" placeholder="请输入邮箱" type="email" error></cl-field>
         <cl-field label="禁用" placeholder="输入框已经禁用" type="text" disabled></cl-field>
       </div>
       
@@ -20,7 +20,7 @@
       </div>
       
       <div class="field-box">
-        <cl-field label="高度" placeholder="自适应" v-model="autoText" type="textarea" rows="1" autosize></cl-field>
+        <cl-field label="高度自适应" placeholder="自适应" v-model="autoText" type="textarea" rows="1" autosize></cl-field>
       </div>
     </div>
   </div>

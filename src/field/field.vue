@@ -3,7 +3,7 @@
     class="cl-field"
     :required="required"
     :title="label"
-    :class="[{'is-textarea': type === 'textarea', 'is-nolabel': !label, 'is-autosize': autosize}]">
+    :class="[{'is-textarea': type === 'textarea', 'is-nolabel': !label, 'is-autosize': autosize, 'is-error': error}]">
     <textarea
       v-if="type === 'textarea'"
       v-model="currentValue"
@@ -55,6 +55,7 @@ export default {
     rows: String,
     label: String,
     placeholder: String,
+    error: Boolean,
     required: Boolean,
     autosize: Boolean,
     readonly: Boolean,
@@ -132,6 +133,14 @@ export default {
   &.is-nolabel {
     .cl-cell-title {
       display: none;
+    }
+  }
+  &.is-error {
+    .cl-field-core {
+      &,
+      &::placeholder {
+        color: $red-500;
+      }
     }
   }
   .cl-cell-title {
