@@ -1,7 +1,7 @@
 <template>
   <div class="cl-checkbox" 
     :class="[`cl-checkbox--${shape}`, {'cl-checkbox--disabled': isDisabled, 'cl-checkbox--checked': isChecked}]">
-    <span class="cl-checkbox__input">
+    <span class="cl-checkbox__input" :class="{'is-right': align === 'right'}">
       <input type="checkbox" v-model="currentValue" class="cl-checkbox__core" :name="name" :disabled="isDisabled">
       <i class="cl-icon cl-icon-success ion-checkmark-round"></i>
     </span>
@@ -18,6 +18,7 @@ export default {
   props: {
     value: {},
     disabled: Boolean,
+    align: String,
     name: [String, Number],
     shape: {
       type: String,
@@ -133,6 +134,9 @@ export default {
   height: $checkbox-size + 2px;
   margin-right: 15px;
   float: left;
+  &.is-right {
+    float: right;
+  }
 }
 .cl-checkbox__core {
   position: absolute;
