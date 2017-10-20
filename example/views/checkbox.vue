@@ -15,6 +15,16 @@
       {{result}}
     </div>
     
+    <div class="checkbox-group">
+      <cl-checkbox-group v-model="result">
+        <cl-cell-group>
+          <cl-cell v-for="(item, index) in list" :key="index">
+            <cl-checkbox :name="item">复选框{{item}}</cl-checkbox>
+          </cl-cell>
+        </cl-cell-group>
+      </cl-checkbox-group>
+    </div>
+    
   </div>
 </template>
 <script>

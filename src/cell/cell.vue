@@ -78,27 +78,33 @@ export default {
   overflow: hidden;
   position: relative;
   text-decoration: none;
+  &:not(:first-child)::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid $grey-100;
+    color: $grey-100;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    left: 15px;
+    z-index: 2;
+  }
   &:first-child {
     .cl-cell-wrapper {
       background-origin: border-box;
     }
   }
-  &:last-child {
-    background-image: linear-gradient(0deg, $color-grey, $color-grey 50%, transparent 50%);
-    background-size: 100% .1rem;
-    background-repeat: no-repeat;
-    background-position: bottom;
-  }
+  
   img {
     vertical-align: middle;
   }
 }
 .cl-cell-wrapper {
-  background-image: linear-gradient(180deg, $color-grey, $color-grey 50%, transparent 50%);
-  background-size: 120% .1rem;
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-origin: content-box;
   align-items: center;
   box-sizing: border-box;
   display: flex;

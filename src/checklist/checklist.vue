@@ -66,78 +66,78 @@ export default {
 }
 </script>
 <style lang="scss">
-@import "../style/base.scss";
-.cl-checklist {
-  .cl-cell {
-    padding: 0;
-  }
-}
-.cl-checklist-label {
-  display: block;
-  padding: 0 1rem;
-}
-.cl-checklist-title {
-  color: $checklist-title-color;
-  display: block;
-  font-size: 1.2rem;
-  margin: .8rem;
-}
-.cl-checklist.is-limit {
-  .cl-checkbox-core:not(:checked) {
-    background-color: $color-grey;
-    border-color: $color-grey;
-  }
-}
-.cl-checkbox {
-  &.is-right {
-    float: right;
-  }
-}
-.cl-checkbox-label {
-  vertical-align: middle;
-  margin-left: .6rem;
-}
-.cl-checkbox-input {
-  display: none;
-  &:checked {
-    + .cl-checkbox-core {
-      background-color: $color-blue;
-      border-color: $color-blue;
-      &::after {
-        border-color: $color-white;
-        transform: rotate(45deg) scale(1);
-      }
-    }
-  }
-}
-
-.cl-checkbox-input[disabled] {
-  + .cl-checkbox-core {
-    background-color: $color-grey;
-    border-color: #ccc;
-  }
-}
-
-.cl-checkbox-core {
-  display: inline-block;
-  border-radius: 100%;
-  border: 1px solid #ccc;
-  position: relative;
-  width: 2rem;
-  height: 2rem;
-  vertical-align: middle;
-  &::after {
-    border: 2px solid transparent;
-    border-left: 0;
-    border-top: 0;
-    content: " ";
-    position: absolute;
-    top: 3px;
-    left: 6px;
-    width: 4px;
-    height: 8px;
-    transform: rotate(45deg) scale(0);
-    transition: transform .2s;
-  }
-}
+// @import "../style/base.scss";
+// .cl-checklist {
+//   .cl-cell {
+//     padding: 0;
+//   }
+// }
+// .cl-checklist-label {
+//   display: block;
+//   padding: 0 1rem;
+// }
+// .cl-checklist-title {
+//   color: $checklist-title-color;
+//   display: block;
+//   font-size: 1.2rem;
+//   margin: .8rem;
+// }
+// .cl-checklist.is-limit {
+//   .cl-checkbox-core:not(:checked) {
+//     background-color: $color-grey;
+//     border-color: $color-grey;
+//   }
+// }
+// .cl-checkbox {
+//   &.is-right {
+//     float: right;
+//   }
+// }
+// .cl-checkbox-label {
+//   vertical-align: middle;
+//   margin-left: .6rem;
+// }
+// .cl-checkbox-input {
+//   display: none;
+//   &:checked {
+//     + .cl-checkbox-core {
+//       background-color: $color-blue;
+//       border-color: $color-blue;
+//       &::after {
+//         border-color: $color-white;
+//         transform: rotate(45deg) scale(1);
+//       }
+//     }
+//   }
+// }
+// 
+// .cl-checkbox-input[disabled] {
+//   + .cl-checkbox-core {
+//     background-color: $color-grey;
+//     border-color: #ccc;
+//   }
+// }
+// 
+// .cl-checkbox-core {
+//   display: inline-block;
+//   border-radius: 100%;
+//   border: 1px solid #ccc;
+//   position: relative;
+//   width: 2rem;
+//   height: 2rem;
+//   vertical-align: middle;
+//   &::after {
+//     border: 2px solid transparent;
+//     border-left: 0;
+//     border-top: 0;
+//     content: " ";
+//     position: absolute;
+//     top: 3px;
+//     left: 6px;
+//     width: 4px;
+//     height: 8px;
+//     transform: rotate(45deg) scale(0);
+//     transition: transform .2s;
+//   }
+// }
 </style>

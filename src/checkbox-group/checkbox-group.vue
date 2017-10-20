@@ -26,5 +26,20 @@ export default {
   components: {}
 }
 </script>
-<style>
+<style lang="scss">
+@import "../style/base.scss";
+.cl-checkbox-group {
+  .cl-cell-wrapper {
+    display: flex;
+    .cl-cell-title {
+      flex: none;
+    }
+    .cl-cell-value {
+      flex: 1;
+      .cl-checkbox {
+        width: 100%;
+      }
+    }
+  }
+}
 </style>
