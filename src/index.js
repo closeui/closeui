@@ -17,6 +17,8 @@ import Spinner from './spinner'
 import Search from './search'
 import Switch from './switch'
 import CheckList from './checklist'
+import CheckBox from './checkbox'
+import CheckboxGroup from './checkbox-group'
 import Field from './field'
 
 const components = {
@@ -36,6 +38,8 @@ const components = {
   Search,
   Switch,
   CheckList,
+  CheckBox,
+  CheckboxGroup,
   Field
 }
 
