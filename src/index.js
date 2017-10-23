@@ -22,6 +22,7 @@ import CheckboxGroup from './checkbox-group'
 import Radio from './radio'
 import RadioGroup from './radio-group'
 import Field from './field'
+import Actionsheet from './actionsheet'
 
 const components = {
   Header,
@@ -44,7 +45,8 @@ const components = {
   CheckboxGroup,
   Radio,
   RadioGroup,
-  Field
+  Field,
+  Actionsheet
 }
 
 const install = function () {
