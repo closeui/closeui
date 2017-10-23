@@ -1,17 +1,17 @@
 <template>
   <div id="page-spinner">
-    <bz-cell title="snake">
-      <bz-spinner color="#26a2ff" type="snake"></bz-spinner>
-    </bz-cell>
-    <bz-cell title="double-bounce">
-      <bz-spinner color="#26a2ff" type="double-bounce"></bz-spinner>
-    </bz-cell>
-    <bz-cell title="triple-bounce">
-      <bz-spinner color="#26a2ff" type="triple-bounce"></bz-spinner>
-    </bz-cell>
-    <bz-cell title="fading-circle">
-      <bz-spinner color="#26a2ff" type="fading-circle"></bz-spinner>
-    </bz-cell>
+    <cl-cell title="snake">
+      <cl-spinner color="#26a2ff" type="snake"></cl-spinner>
+    </cl-cell>
+    <cl-cell title="double-bounce">
+      <cl-spinner color="#26a2ff" type="double-bounce"></cl-spinner>
+    </cl-cell>
+    <cl-cell title="triple-bounce">
+      <cl-spinner color="#26a2ff" type="triple-bounce"></cl-spinner>
+    </cl-cell>
+    <cl-cell title="fading-circle">
+      <cl-spinner color="#26a2ff" type="fading-circle"></cl-spinner>
+    </cl-cell>
   </div>
 </template>
 <script>

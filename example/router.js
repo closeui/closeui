@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
+import DemoList from './views/demolist'
 import Demo from './views/demos'
+import Layout from './views/layout'
 import Header from './views/header'
 import Button from './views/button'
 import Cell from './views/cell'
@@ -13,12 +15,16 @@ import Spinner from './views/spinner'
 import Search from './views/search'
 import Switch from './views/switch'
 import CheckList from './views/checklist'
+import CheckBox from './views/checkbox'
+import Radio from './views/radio'
+import Field from './views/field'
 Vue.use(Router)
 
 const router = new Router({
   mode: 'hash',
   routes: [
-    { path: '/', component: Demo, name: 'demo' },
+    { path: '/', component: DemoList, name: 'demolist' },
+    { path: '/layout', component: Layout, name: 'layout' },
     { path: '/header', component: Header, name: 'header' },
     { path: '/button', component: Button, name: 'button' },
     { path: '/cell', component: Cell, name: 'cell' },
@@ -30,6 +36,9 @@ const router = new Router({
     { path: '/search', component: Search, name: 'search' },
     { path: '/switch', component: Switch, name: 'switch' },
     { path: '/checklist', component: CheckList, name: 'checklist' },
+    { path: '/checkbox', component: CheckBox, name: 'checkbox' },
+    { path: '/field', component: Field, name: 'field' },
+    { path: '/radio', component: Radio, name: 'radio' },
     { path: '*', redirect: '/' }
   ]
 })

@@ -7,7 +7,7 @@
     <div class="cl-cell-wrapper">
       <div class="cl-cell-title">
         <slot name="icon">
-          <i v-if="icon" class="bzui" :class="'bzui-' + icon"></i>
+          <i v-if="icon" class="cl-icon" :class="'ion-' + icon"></i>
         </slot>
         <slot name="title">
           <span class="cl-cell-text" v-text="title"></span>
@@ -23,15 +23,11 @@
     <div class="cl-cell-right">
       <slot name="right"></slot>
     </div>
-    <i class="cl-cell-allow-right" v-if="isLink"></i>
+    <i class="ion-chevron-right cl-cell-right__arrow-icon" v-if="isLink"></i>
   </a>
 </template>
 
 <script>
-/**
- * cl-cell
- * @param
- */
 export default {
   name: 'cl-cell',
   props: {
@@ -48,18 +44,15 @@ export default {
   },
   computed: {
     href () {
-      if (this.to && !this.added && this.$router) {
+      if (typeof this.to === 'string') {
+        return this.to
+      } else if (typeof this.to === 'object') {
         const resolved = this.$router.match(this.to)
-        if (!resolved.matched.length) {
-          return this.to
-        }
         this.$nextTick(() => {
-          this.added = true
           this.$el.addEventListener('click', this.handleClick)
         })
         return resolved.path
       }
-      return this.to
     }
   },
   ready: function () {},
@@ -85,27 +78,33 @@ export default {
   overflow: hidden;
   position: relative;
   text-decoration: none;
+  &:not(:first-child)::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid $grey-100;
+    color: $grey-100;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    left: 15px;
+    z-index: 2;
+  }
   &:first-child {
     .cl-cell-wrapper {
       background-origin: border-box;
     }
   }
-  &:last-child {
-    background-image: linear-gradient(0deg, $color-grey, $color-grey 50%, transparent 50%);
-    background-size: 100% .1rem;
-    background-repeat: no-repeat;
-    background-position: bottom;
-  }
+  
   img {
     vertical-align: middle;
   }
 }
 .cl-cell-wrapper {
-  background-image: linear-gradient(180deg, $color-grey, $color-grey 50%, transparent 50%);
-  background-size: 120% .1rem;
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-origin: content-box;
   align-items: center;
   box-sizing: border-box;
   display: flex;
@@ -165,16 +164,25 @@ export default {
   top: 0;
   transform: translate3d(100%, 0, 0);
 }
+
 .cl-cell-allow-right::after {
-  border: .2rem solid $border-color;
+  border: 2px solid $border-color;
   border-bottom-width: 0;
   border-left-width: 0;
   content: '';
   position: absolute;
   top: 50%;
   right: 2rem;
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   transform: translateY(-50%) rotate(45deg);
+}
+
+.cl-cell-right__arrow-icon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  color: #999;
 }
 </style>

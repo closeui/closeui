@@ -1,4 +1,93 @@
-$fontFamily: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+/**
+ * fontFamily
+ * @type {[type]}
+ */
+$fontFamily: -apple-system, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+
+/**
+ * brand color
+ * @type {[type]}
+ */
+$brand-color: #0093f0;
+$brand-color-red: #fc3670;
+
+/* Color */
+$color-normal: #6190E8;
+$color-primary: #6190E8;
+$color-success: #13CE66;
+$color-error: #FF4949;
+$color-warning: #FFC82C;
+$color-info: #78A4FA;
+$color-white: #FFF;
+
+/* Color PalettC */
+$blue-50:  #e0f2fd;
+$blue-100: #b3dffb;
+$blue-200: #80c9f8;
+$blue-300: #4db3f5;
+$blue-400: #26a3f2;
+$blue-500: #0093f0;
+$blue-600: #008bee;
+$blue-700: #0080ec;
+$blue-800: #0076e9;
+$blue-900: #0064e5;
+
+$green-50: #e0f8ef;
+$green-100: #b3edd8;
+$green-200: #80e1be;
+$green-300: #4dd4a3;
+$green-400: #26cb90;
+$green-500: #00c27c;
+$green-600: #00bc74;
+$green-700: #00b469;
+$green-800: #00ac5f;
+$green-900: #009f4c;
+
+$red-50: #fee7e6;
+$red-100: #fcc3c1;
+$red-200: #fa9c98;
+$red-300: #f7746e;
+$red-400: #f6564f;
+$red-500: #f43830;
+$red-600: #f3322b;
+$red-700: #f12b24;
+$red-800: #ef241e;
+$red-900: #ec1713;
+
+$yellow-50: #fffae0;
+$yellow-100: #fff2b3;
+$yellow-200: #ffe980;
+$yellow-300: #ffe04d;
+$yellow-400: #ffd926;
+$yellow-500: #ffd200;
+$yellow-600: #ffcd00;
+$yellow-700: #ffc700;
+$yellow-800: #ffc100;
+$yellow-900: #ffb600;
+
+$grey-50: #f6f6f6;
+$grey-100: #e7e7e7;
+$grey-200: #d8d8d8;
+$grey-300: #c8c8c8;
+$grey-400: #bcbcbc;
+$grey-500: #b0b0b0;
+$grey-600: #a9a9a9;
+$grey-700: #a0a0a0;
+$grey-800: #979797;
+$grey-900: #878787;
+
+$black-50: #E6E8EB;
+$black-100: #C0C6CE;
+$black-200: #96A0AD;
+$black-300: #6B798C;
+$black-400: #4C5D73;
+$black-500: #2C405A;
+$black-600: #273A52;
+$black-700: #213248;
+$black-800: #1B2A3F;
+$black-900: #101C2E;
+
+
 $color-blue: #26a2ff;
 $color-white: #fff;
 $color-grey: #d9d9d9;
@@ -15,9 +104,22 @@ $button-default-background-color: #f6f8fa;
 $button-default-plain-color: #5a5a5a;
 $button-default-box-shadow: 0 0 .1rem #b8bbbf;
 $button-primary-color: #fff;
-$button-primary-background-color: #26a2ff;
+$button-primary-background-color: #0093f0;
 $button-danger-color: #fff;
-$button-danger-background-color: #ef4f4f;
+$button-danger-background-color: #f43830;
+$button-warning-color: #fff;
+$button-warning-background-color: #ffd200;
+
+$btn-padding-smer: 2px 10px;
+$btn-padding-sm: 4px 12px;
+$btn-padding-base: 6px 16px;
+$btn-padding-md: 8px 16px;
+$btn-padding-lg: 10px 18px;
+
+$btn-circle-size-smer: 24px;
+$btn-circle-size-sm: 28px;
+$btn-circle-size: 32px;
+$btn-circle-size-lg: 40px;
 
 $tab-item-font-size: 1.2rem;
 
@@ -33,3 +135,5 @@ $checklist-title-color: #888;
 $radio-title-color: #888;
 
 $z-index-normal: 1;
+
+$checkbox-size: 20px;

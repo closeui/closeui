@@ -1,12 +1,12 @@
 <template lang="html">
   <div class="">
-    <bz-navbar class="page-part" v-model="selected">
-      <bz-tab-item id="1">选项一</bz-tab-item>
-      <bz-tab-item id="2">选项二</bz-tab-item>
-      <bz-tab-item id="3">选项三</bz-tab-item>
-    </bz-navbar>
+    <cl-navbar class="page-part" v-model="selected">
+      <cl-tab-item id="1">选项一</cl-tab-item>
+      <cl-tab-item id="2">选项二</cl-tab-item>
+      <cl-tab-item id="3">选项三</cl-tab-item>
+    </cl-navbar>
     <div class="page-selected">
-      <bz-cell class="page-part" title="当前选中" :value="selected"></bz-cell>
+      <cl-cell class="page-part" title="当前选中" :value="selected"></cl-cell>
     </div>
   </div>
 </template>

@@ -1,4 +1,5 @@
 @import "./normalize.scss";
+@import "./mixins/index";
 @import "./var.scss";
 
 *,
@@ -22,4 +23,13 @@ a {
   text-decoration: none;
   -webkit-user-select: none;
 }
+
+textarea {
+  resize:none;
+}
+.cl-icon {
+  font-size: 16px;
+  vertical-align: middle;
+}
+
 

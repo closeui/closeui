@@ -1,7 +1,7 @@
 <template>
   <div id="cl-checklist" @change="$emit('change', currentValue)" class="cl-checklist" :class="{ 'is-limit': max <= currentValue.length }">
     <label class="cl-checklist-title" v-text="title"></label>
-    <x-cell v-for="option in options" :key="option">
+    <cl-cell v-for="option in options" :key="option">
       <label class="cl-checklist-label" slot="title">
         <span :class="{'is-right': align === 'right'}" class="cl-checkbox">
           <input class="cl-checkbox-input" type="checkbox" v-model="currentValue" :disabled="option.disabled" :value="option.value || option" value="">
@@ -9,7 +9,7 @@
         </span>
         <span class="cl-checkbox-label" v-text="option.label || option"></span>
       </label>
-    </x-cell>
+    </cl-cell>
   </div>
 </template>
 <script>
@@ -24,7 +24,7 @@
  * @example
  * <cl-checklist :v-model="value" :options="['a', 'b', 'c']"></cl-checklist>
  */
-import XCell from '../cell/index'
+import ClCell from '../cell/index'
 export default {
   name: 'cl-checklist',
   props: {
@@ -61,7 +61,7 @@ export default {
   },
   methods: {},
   components: {
-    XCell
+    ClCell
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div id="page-search" class="page-search">
-    <bz-search autofocus v-model="value" :result="filterResult"></bz-search>
+    <cl-search autofocus v-model="value" :result="filterResult"></cl-search>
   </div>
 </template>
 <script>

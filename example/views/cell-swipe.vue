@@ -1,9 +1,9 @@
 <template lang="html">
   <div class="">
     cell-swipe
-    <bz-cell-swipe v-for="n in 10" :key="n" :right="rightButtons" :title="`${n}swipe row`">
+    <cl-cell-swipe v-for="n in 10" :key="n" :right="rightButtons" :title="`${n}swipe row`">
       
-    </bz-cell-swipe>
+    </cl-cell-swipe>
   </div>
 </template>
 

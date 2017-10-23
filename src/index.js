@@ -1,10 +1,13 @@
 import './style/base.scss'
-import './style/font/iconfont.css'
+import './style/icon/ionicons.css'
 import Vue from 'vue'
 import Header from './header'
 import Button from './button'
 import Cell from './cell'
+import CellGroup from './cell-group'
 import CellSwipe from './cell-swipe'
+import Col from './col'
+import Row from './row'
 import TabItem from './tab-item'
 import Tabbar from './tabbar'
 import TabContainerItem from './tab-container-item'
@@ -14,12 +17,20 @@ import Spinner from './spinner'
 import Search from './search'
 import Switch from './switch'
 import CheckList from './checklist'
+import CheckBox from './checkbox'
+import CheckboxGroup from './checkbox-group'
+import Radio from './radio'
+import RadioGroup from './radio-group'
+import Field from './field'
 
 const components = {
   Header,
   Button,
   Cell,
+  CellGroup,
   CellSwipe,
+  Col,
+  Row,
   TabItem,
   Tabbar,
   TabContainerItem,
@@ -28,7 +39,12 @@ const components = {
   Spinner,
   Search,
   Switch,
-  CheckList
+  CheckList,
+  CheckBox,
+  CheckboxGroup,
+  Radio,
+  RadioGroup,
+  Field
 }
 
 const install = function () {
