@@ -1,12 +1,18 @@
 <template>
-  <div id="page-switch">
-    <h2>switch</h2>
-    <cl-switch v-model='value1' @change="handleChange">
-      <label v-text="value1"></label>
-    </cl-switch>
-    <cl-switch v-model="value4" @change="handleChange">
-      <label v-text="value4"></label>
-    </cl-switch>
+  <div class="page-switch">
+    <div class="page-title">Switch 开关</div>
+    <div class="switch-box">
+      <cl-switch v-model='value1' @change="handleChange">
+        <label v-text="value1"></label>
+      </cl-switch>
+    </div>
+    
+    <div class="switch-box">
+      <cl-switch v-model="value4" @change="handleChange">
+        <label v-text="value4"></label>
+      </cl-switch>
+    </div>
+    
     <cl-cell :title="`选项${value2}`">
       <cl-switch v-model="value2" @change="handleChange"></cl-switch>
     </cl-cell>
@@ -38,5 +44,9 @@ export default {
   componets: {}
 }
 </script>
-<style>
+<style lang="scss">
+.switch-box {
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
 </style>

@@ -37,6 +37,10 @@ module.exports = {
               'title': 'Radio 单选框'
             },
             {
+              'path': '/switch',
+              'title': 'Switch 开关'
+            },
+            {
               'path': '/field',
               'title': 'Field 输入框'
             }
