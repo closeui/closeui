@@ -16,6 +16,7 @@ import Search from './views/search'
 import Switch from './views/switch'
 import CheckList from './views/checklist'
 import CheckBox from './views/checkbox'
+import Radio from './views/radio'
 import Field from './views/field'
 Vue.use(Router)
 
@@ -37,6 +38,7 @@ const router = new Router({
     { path: '/checklist', component: CheckList, name: 'checklist' },
     { path: '/checkbox', component: CheckBox, name: 'checkbox' },
     { path: '/field', component: Field, name: 'field' },
+    { path: '/radio', component: Radio, name: 'radio' },
     { path: '*', redirect: '/' }
   ]
 })

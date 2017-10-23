@@ -29,7 +29,6 @@ export default {
   left: 0;
   right: 0;
   height: 1px;
-  border-top: 1px solid $grey-200;
   color: $grey-200;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
@@ -42,10 +41,12 @@ export default {
   position: relative;
   &::before {
     top: 0;
+    border-top: 1px solid $grey-200;
     @extend .groupcell-border;
   }
   &::after {
     bottom: 0;
+    border-bottom: 1px solid $grey-200;
     @extend .groupcell-border;
   }
 }

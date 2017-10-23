@@ -33,6 +33,10 @@ module.exports = {
               'title': 'Checkbox 复选框'
             },
             {
+              'path': '/radio',
+              'title': 'Radio 单选框'
+            },
+            {
               'path': '/field',
               'title': 'Field 输入框'
             }

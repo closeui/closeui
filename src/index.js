@@ -19,6 +19,8 @@ import Switch from './switch'
 import CheckList from './checklist'
 import CheckBox from './checkbox'
 import CheckboxGroup from './checkbox-group'
+import Radio from './radio'
+import RadioGroup from './radio-group'
 import Field from './field'
 
 const components = {
@@ -40,6 +42,8 @@ const components = {
   CheckList,
   CheckBox,
   CheckboxGroup,
+  Radio,
+  RadioGroup,
   Field
 }
 
