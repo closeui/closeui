@@ -13,7 +13,7 @@ import Tabbar from './tabbar'
 import TabContainerItem from './tab-container-item'
 import TabContainer from './tab-container'
 import Navbar from './navbar'
-import Spinner from './spinner'
+import Loading from './loading'
 import Search from './search'
 import Switch from './switch'
 import CheckList from './checklist'
@@ -23,6 +23,7 @@ import Radio from './radio'
 import RadioGroup from './radio-group'
 import Field from './field'
 import Actionsheet from './actionsheet'
+import Icon from './icon'
 
 const components = {
   Header,
@@ -37,7 +38,7 @@ const components = {
   TabContainerItem,
   TabContainer,
   Navbar,
-  Spinner,
+  Loading,
   Search,
   Switch,
   CheckList,
@@ -46,7 +47,8 @@ const components = {
   Radio,
   RadioGroup,
   Field,
-  Actionsheet
+  Actionsheet,
+  Icon
 }
 
 const install = function () {

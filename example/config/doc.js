@@ -22,6 +22,10 @@ module.exports = {
             {
               'path': '/cell',
               'title': 'Cell 单元格'
+            },
+            {
+              'path': '/loading',
+              'title': 'Loading 加载'
             }
           ]
         },
