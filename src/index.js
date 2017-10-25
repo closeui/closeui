@@ -1,4 +1,4 @@
-import './style/base.scss'
+import './style/index.scss'
 import './style/icon/ionicons.css'
 import Vue from 'vue'
 import Header from './header'
