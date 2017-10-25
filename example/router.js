@@ -11,7 +11,7 @@ import CellSwipe from './views/cell-swipe'
 import Tabbar from './views/tabbar'
 import Navbar from './views/navbar'
 import TabContainer from './views/tab-container'
-import Spinner from './views/spinner'
+import Loading from './views/loading'
 import Search from './views/search'
 import Switch from './views/switch'
 import CheckList from './views/checklist'
@@ -32,7 +32,7 @@ const router = new Router({
     { path: '/tabbar', component: Tabbar, name: 'tabbar' },
     { path: '/navbar', component: Navbar, name: 'navbar' },
     { path: '/tab-container', component: TabContainer, name: 'tab-container' },
-    { path: '/spinner', component: Spinner, name: 'spinner' },
+    { path: '/loading', component: Loading, name: 'loading' },
     { path: '/search', component: Search, name: 'search' },
     { path: '/switch', component: Switch, name: 'switch' },
     { path: '/checklist', component: CheckList, name: 'checklist' },

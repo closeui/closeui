@@ -1,5 +1,5 @@
 <template>
-  <div id="snake" class="cl-spinner-snake" :style="{
+  <div id="snake" class="cl-loading-snake" :style="{
     'border-top-color': spinnerColor,
     'border-left-color': spinnerColor,
     'border-bottom-color': spinnerColor,
@@ -21,12 +21,12 @@ export default {
 }
 </script>
 <style lang="scss">
-.cl-spinner-snake {
-  animation: cl-spinner-rotate .8s infinite linear;
+.cl-loading-snake {
+  animation: cl-loading-rotate .8s infinite linear;
   border: .4rem solid transparent;
   border-radius: 50%;
 }
-@keyframes cl-spinner-rotate {
+@keyframes cl-loading-rotate {
   0% {
     transform: rotate(0deg);
   }

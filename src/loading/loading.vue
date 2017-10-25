@@ -3,15 +3,15 @@
 </template>
 <script>
 /**
- * cl-spinner
+ * cl-loading
  * @param {(string|number)} [type=snake] - 显示类型，传入类型名或类型id, 'snake', 'double-bounce', 'triple-bounce', 'fading-circle'
  * @param {number} size - 尺寸
  * @param {string} color - 颜色
  *
  * @example
- * <cl-spinner type="snake"></cl-spinner>
+ * <cl-loading type="snake"></cl-loading>
  *
- * <cl-spinner :size="30" color="#999"></cl-spinner>
+ * <cl-loading :size="30" color="#999"></cl-loading>
  */
 const SPINNERS = [
   'snake',
@@ -33,8 +33,12 @@ const parseSpinner = function (index) {
   }
   return index
 }
+import SpinnerSnake from './spinner/snake'
+import SpinnerDoubleBounce from './spinner/double-bounce'
+import SpinnerTripleBounce from './spinner/triple-bounce'
+import SpinnerFadingCircle from './spinner/fading-circle'
 export default {
-  name: 'cl-spinner',
+  name: 'cl-loading',
   props: {
     type: {
       default: 0
@@ -59,10 +63,10 @@ export default {
     }
   },
   components: {
-    SpinnerSnake: require('./spinner/snake'),
-    SpinnerDoubleBounce: require('./spinner/double-bounce'),
-    SpinnerTripleBounce: require('./spinner/triple-bounce'),
-    SpinnerFadingCircle: require('./spinner/fading-circle')
+    SpinnerSnake,
+    SpinnerDoubleBounce,
+    SpinnerTripleBounce,
+    SpinnerFadingCircle
   }
 }
 </script>

@@ -1,10 +1,10 @@
 <template>
-  <div id="double-bounce" class="cl-spinner-double-bounce" :style="{
+  <div id="double-bounce" class="cl-loading-double-bounce" :style="{
     width: spinnerSize,
     height: spinnerSize
     }">
-    <div class="cl-spinner-double-bounce-bounce1" :style="{ backgroundColor: spinnerColor }"></div>
-    <div class="cl-spinner-double-bounce-bounce2" :style="{ backgroundColor: spinnerColor }"></div>
+    <div class="cl-loading-double-bounce-bounce1" :style="{ backgroundColor: spinnerColor }"></div>
+    <div class="cl-loading-double-bounce-bounce2" :style="{ backgroundColor: spinnerColor }"></div>
   </div>
 </template>
 <script>
@@ -20,9 +20,9 @@ export default {
 }
 </script>
 <style lang="scss">
-.cl-spinner-double-bounce {
+.cl-loading-double-bounce {
   position: relative;
-  .cl-spinner-double-bounce-bounce1, .cl-spinner-double-bounce-bounce2 {
+  .cl-loading-double-bounce-bounce1, .cl-loading-double-bounce-bounce2 {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -30,14 +30,14 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    animation: cl-spinner-double-bounce 2.0s infinite ease-in-out;
+    animation: cl-loading-double-bounce 2.0s infinite ease-in-out;
   }
-  .cl-spinner-double-bounce-bounce2 {
+  .cl-loading-double-bounce-bounce2 {
     animation-delay: -1.0s;
   }
 }
 
-@keyframes cl-spinner-double-bounce {
+@keyframes cl-loading-double-bounce {
   0%, 100% {
     transform: scale(0.0);
   }
