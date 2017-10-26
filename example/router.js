@@ -18,6 +18,7 @@ import CheckList from './views/checklist'
 import CheckBox from './views/checkbox'
 import Radio from './views/radio'
 import Field from './views/field'
+import ActionSheet from './views/action-sheet'
 Vue.use(Router)
 
 const router = new Router({
@@ -39,6 +40,7 @@ const router = new Router({
     { path: '/checkbox', component: CheckBox, name: 'checkbox' },
     { path: '/field', component: Field, name: 'field' },
     { path: '/radio', component: Radio, name: 'radio' },
+    { path: '/action-sheet', component: ActionSheet, name: 'action-sheet' },
     { path: '*', redirect: '/' }
   ]
 })

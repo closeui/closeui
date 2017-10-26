@@ -25,8 +25,10 @@
   </transition>
 </template>
 <script>
+import Popup from '../mixins/popup'
 export default {
   name: 'cl-actionsheet',
+  mixins: [Popup],
   props: {
     actions: {
       type: Array,
@@ -34,7 +36,15 @@ export default {
     },
     value: Boolean,
     title: String,
-    cancelText: String
+    cancelText: String,
+    overlay: {
+      type: Boolean,
+      default: true
+    },
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: true
+    }
   },
   data () {
     return {
@@ -43,9 +53,17 @@ export default {
   },
   beforeCreate () {},
   created () {},
-  mounted () {},
+  mounted () {
+    this.value && this.open()
+  },
   computed: {},
-  methods: {},
+  methods: {
+    onClickItem (item) {
+      if (typeof item.callback === 'function') {
+        item.callback(item)
+      }
+    }
+  },
   components: {}
 }
 </script>
