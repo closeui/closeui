@@ -3,7 +3,7 @@
     <div :class="['cl-actionsheet', {'cl-actionsheet--withtitle': title}]" v-show="value">
       <div class="cl-actionsheet__header cl-hairline--top-bottom" v-if="title">
         <div v-text="title"></div>
-        <cl-icon name="ios-close-outline"  @click.stop="$emit('input', false)"></cl-icon>
+        <cl-icon class="cl-icon-close" name="ios-close-outline"  @click.stop="$emit('input', false)"></cl-icon>
       </div>
       <ul v-if="!title" class="cl-actionsheet__list">
         <li

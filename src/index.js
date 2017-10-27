@@ -23,6 +23,7 @@ import Radio from './radio'
 import RadioGroup from './radio-group'
 import Field from './field'
 import Actionsheet from './actionsheet'
+import Dialog from './dialog'
 import Icon from './icon'
 
 const components = {
@@ -48,6 +49,7 @@ const components = {
   RadioGroup,
   Field,
   Actionsheet,
+  Dialog,
   Icon
 }
 

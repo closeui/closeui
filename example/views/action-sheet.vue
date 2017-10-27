@@ -2,8 +2,23 @@
   <div class="page-actionsheet">
     <div class="page-title">ActionSheet-行动按钮</div>
     <div class="page-body">
-      <cl-button type="default" @click="show1 = true">弹出actionsheet</cl-button>
-      <cl-actionsheet v-model="show1" :actions="actions1"></cl-actionsheet>
+      <div class="block">
+        <cl-button type="default" @click="show1 = true">弹出actionsheet</cl-button>
+        <cl-actionsheet v-model="show1" :actions="actions1"></cl-actionsheet>
+      </div>
+      
+      <div class="block">
+        <cl-button type="default" @click="show2 = true">弹出带取消按钮的actionsheet</cl-button>
+        <cl-actionsheet v-model="show2" :actions="actions1" cancel-text="取消"></cl-actionsheet>
+      </div>
+      
+      <div class="block">
+        <cl-button type="default" @click="show3 = true">弹出带标题的actionsheet</cl-button>
+        <cl-actionsheet class="actionsheet" v-model="show3" title="超级驾校服务费" :actions="actions1">
+          <p class="actionsheet__content">这里是内容</p>
+        </cl-actionsheet>
+      </div>
+      
     </div>
   </div>
 </template>
@@ -13,6 +28,8 @@ export default {
   data () {
     return {
       show1: false,
+      show2: false,
+      show3: false,
       actions1: [
         {
           name: '微信安全支付',
@@ -44,5 +61,15 @@ export default {
 .page-body {
   box-sizing: border-box;
   padding: 10px 15px;
+}
+.block {
+  padding-top: 15px;
+}
+
+.actionsheet {
+  &__content {
+    text-align: center;
+    font-size: 18px;
+  }
 }
 </style>
