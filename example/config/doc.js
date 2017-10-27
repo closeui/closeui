@@ -56,6 +56,10 @@ module.exports = {
             {
               'path': '/action-sheet',
               'title': 'Actionsheet 行动按钮'
+            },
+            {
+              'path': '/dialog',
+              'title': 'Dialog 弹出框'
             }
           ]
         },

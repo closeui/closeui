@@ -27,8 +27,49 @@
   </transition>
 </template>
 <script>
+import ClButton from '../button'
+import Popup from '../mixins/popup'
 export default {
   name: 'cl-dialog',
+  mixins: [Popup],
+  props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    message: {
+      type: String,
+      default: ''
+    },
+    showConfirmButton: {
+      type: Boolean,
+      default: true
+    },
+    showCancelButton: {
+      type: Boolean,
+      default: false
+    },
+    confirmButtonText: {
+      type: String,
+      default: '确认'
+    },
+    cancelButtonText: {
+      type: String,
+      default: '取消'
+    },
+    callback: {
+      type: Function
+    },
+    overlay: {
+      default: true
+    },
+    closeOnClickOverlay: {
+      default: false
+    },
+    lockOnScroll: {
+      default: true
+    }
+  },
   data () {
     return {
 
@@ -38,8 +79,16 @@ export default {
   created () {},
   mounted () {},
   computed: {},
-  methods: {},
-  components: {}
+  methods: {
+    handleAction (action) {
+      this.$emit('input', false)
+      this.$emit(action)
+      this.callback && this.callback(action)
+    }
+  },
+  components: {
+    ClButton
+  }
 }
 </script>
 <style>
