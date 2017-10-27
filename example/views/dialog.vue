@@ -4,19 +4,14 @@
     <div class="page-body">
       <div class="block">
         <cl-button type="default" @click="onClickAlert">Alert</cl-button>
-        <cl-actionsheet v-model="show1" :actions="actions1"></cl-actionsheet>
       </div>
       
       <div class="block">
-        <cl-button type="default" @click="show2 = true">弹出带取消按钮的actionsheet</cl-button>
-        <cl-actionsheet v-model="show2" :actions="actions1" cancel-text="取消"></cl-actionsheet>
+        <cl-button type="default" @click="onClickAlert2">无标题 Alert</cl-button>
       </div>
       
       <div class="block">
-        <cl-button type="default" @click="show3 = true">弹出带标题的actionsheet</cl-button>
-        <cl-actionsheet class="actionsheet" v-model="show3" title="超级驾校服务费" :actions="actions1">
-          <p class="actionsheet__content">这里是内容</p>
-        </cl-actionsheet>
+        <cl-button type="default" @click="onClickConfirm">消息确认 Confirm</cl-button>
       </div>
       
     </div>
@@ -28,22 +23,6 @@ export default {
   name: '',
   data () {
     return {
-      show1: false,
-      show2: false,
-      show3: false,
-      actions1: [
-        {
-          name: '微信安全支付',
-          className: 'actionsheet-wx',
-          callback: this.handleActionClick
-        },
-        {
-          name: '信用卡支付'
-        },
-        {
-          name: '其他支付方式'
-        }
-      ]
     }
   },
   beforeCreate () {},
@@ -54,7 +33,26 @@ export default {
     onClickAlert () {
       Dialog.alert({
         title: '标题',
-        message: ''
+        message: '这里是内容'
+      }).then(() => {
+        console.log('close 1')
+      })
+    },
+    onClickAlert2 () {
+      Dialog.alert({
+        message: '弹窗内容'
+      }).then(() => {
+        console.log('close 2')
+      })
+    },
+    onClickConfirm () {
+      Dialog.confirm({
+        title: '标题',
+        message: '这里是内容'
+      }).then(() => {
+        console.log('confirm')
+      }).catch(() => {
+        console.log('cancel')
       })
     }
   },
