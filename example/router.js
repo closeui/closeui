@@ -20,6 +20,7 @@ import Radio from './views/radio'
 import Field from './views/field'
 import ActionSheet from './views/action-sheet'
 import Dialog from './views/dialog'
+import Toast from './views/toast'
 Vue.use(Router)
 
 const router = new Router({
@@ -43,6 +44,7 @@ const router = new Router({
     { path: '/radio', component: Radio, name: 'radio' },
     { path: '/action-sheet', component: ActionSheet, name: 'action-sheet' },
     { path: '/dialog', component: Dialog, name: 'dialog' },
+    { path: '/toast', component: Toast, name: 'toast' },
     { path: '*', redirect: '/' }
   ]
 })

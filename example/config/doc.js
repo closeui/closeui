@@ -60,6 +60,10 @@ module.exports = {
             {
               'path': '/dialog',
               'title': 'Dialog 弹出框'
+            },
+            {
+              'path': '/toast',
+              'title': 'Toast 弹出式提示'
             }
           ]
         },
