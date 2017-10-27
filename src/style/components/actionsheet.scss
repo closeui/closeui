@@ -1,0 +1,48 @@
+@import '../var';
+
+.cl-actionsheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: $text-color;
+  background-color: $background-color;
+  transition: .2s ease-out;
+  
+  &--withtile {
+    background-color: $color-white;
+  }
+  
+  &__item {
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    background-color: $color-white;
+    text-align: center;
+    &:active {
+      background-color: $active-color;
+    }
+  }
+  
+  &__cancel {
+    margin-top: 10px;
+  }
+  
+  &__header {
+    line-height: 44px;
+    text-align: center;
+    font-size: 18px;
+    .cl-icon-close {
+      position: absolute;
+      top: 11px;
+      right: 15px;
+      font-size: 22px;
+      line-height: 22px;
+    }
+  }
+  
+  &-float-enter,
+  &-float-leave-active {
+    transform: translate3d(0, 100%, 0);
+  }
+}

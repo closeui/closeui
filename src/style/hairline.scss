@@ -1,0 +1,14 @@
+.cl-hairline {
+  &,
+  &--top,
+  &--left,
+  &--right,
+  &--bottom,
+  &--top-bottom,
+  &--surround {
+    position: relative;
+    &::after {
+      @include border-retina($hair-color)
+    }
+  }
+}

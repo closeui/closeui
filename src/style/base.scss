@@ -1,5 +1,5 @@
-@import "./mixins/index";
 @import "./var.scss";
+@import "./mixins/index";
 
 *,
 *:before,
@@ -21,6 +21,16 @@ body {
 a {
   text-decoration: none;
   -webkit-user-select: none;
+}
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  list-style: none;
 }
 
 textarea {

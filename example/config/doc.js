@@ -54,8 +54,12 @@ module.exports = {
           'groupName': '操作反馈',
           'list': [
             {
-              'path': '/actionsheet',
+              'path': '/action-sheet',
               'title': 'Actionsheet 行动按钮'
+            },
+            {
+              'path': '/dialog',
+              'title': 'Dialog 弹出框'
             }
           ]
         },

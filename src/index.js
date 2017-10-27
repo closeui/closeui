@@ -23,9 +23,10 @@ import Radio from './radio'
 import RadioGroup from './radio-group'
 import Field from './field'
 import Actionsheet from './actionsheet'
+import Dialog from './dialog'
 import Icon from './icon'
 
-const components = {
+const components = [
   Header,
   Button,
   Cell,
@@ -48,12 +49,14 @@ const components = {
   RadioGroup,
   Field,
   Actionsheet,
+  Dialog,
   Icon
-}
+]
 
 const install = function () {
-  Object.keys(components).forEach((key) => {
-    Vue.component(components[key].name, components[key])
+  if (install.installed) return
+  components.forEach(component => {
+    Vue.component(component.name, component)
   })
 }
 
@@ -61,10 +64,34 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue)
 }
 
-export default {
-  install
+export {
+  install,
+  Header,
+  Button,
+  Cell,
+  CellGroup,
+  CellSwipe,
+  Col,
+  Row,
+  TabItem,
+  Tabbar,
+  TabContainerItem,
+  TabContainer,
+  Navbar,
+  Loading,
+  Search,
+  Switch,
+  CheckList,
+  CheckBox,
+  CheckboxGroup,
+  Radio,
+  RadioGroup,
+  Field,
+  Actionsheet,
+  Dialog,
+  Icon
 }
 
-export {
+export default {
   install
 }

@@ -43,7 +43,7 @@ const PopupManager = {
   },
   handleOverlayClick () {
     const modalStack = PopupContext.getContext('modalStack')
-    const topModal = modalStack[modalStack.length -1]
+    const topModal = modalStack[modalStack.length - 1]
     if (!topModal) return
     const instance = PopupManager.getInstance(topModal.id)
     if (instance && instance.closeOnClickOverlay) {
@@ -82,13 +82,13 @@ const PopupManager = {
       if (topItem.id === id) {
         modalStack.pop()
         if (modalStack.length > 0) {
-          modalDom.style.zIndex = modalStack[modalStack.length -1].zIndex
+          modalDom.style.zIndex = modalStack[modalStack.length - 1].zIndex
           modalDom.parentNode.removeChild(modalDom)
           const currModalParent = modalStack[0].parentNode
           currModalParent && currModalParent.appendChild(modalDom)
         }
       } else {
-        for (let i = modalStack.length -1; i >= 0; i--) {
+        for (let i = modalStack.length - 1; i >= 0; i--) {
           if (modalStack[i].id === id) {
             modalStack.splice(i, 1)
             break

@@ -55,7 +55,7 @@ export default {
   },
   beforeMount () {
     this._popupId = 'popup-' + PopupContext.plusKeyByOne('idSeed')
-    PopupManger.register(this._popupId, this)
+    PopupManager.register(this._popupId, this)
   },
   methods: {
     recordPosition (e) {

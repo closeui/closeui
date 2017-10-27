@@ -1,0 +1,56 @@
+@import '../var';
+
+.cl-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 85%;
+  font-size: 16px;
+  overflow: hidden;
+  transition: .2s;
+  border-radius: 4px;
+  background-color: $color-white;
+  transform: translate3d(-50%, -50%, 0);
+  
+  &__header {
+    padding: 15px 0 0;
+    text-align: center;
+  }
+  
+  &__content {
+    padding: 15px 20px;
+    &::after {
+      border-bottom-width: 1px;
+    }
+    &.cl-hairline {
+      &::after {
+        border-top: none;
+      }
+    }
+  }
+  
+  &__message {
+    line-height: 1.5;
+    
+    &--withtitle {
+      color: $grey-500;
+      font-size: 14px;
+    }
+  }
+  
+  &__footer {
+    overflow: hidden;
+    &.is-twobtn {
+      display: flex;
+      .cl-button {
+        flex: 1;
+      }
+    }
+  }
+  
+  .cl-button {
+    border: 0;
+  }
+  
+  
+}
