@@ -8,10 +8,14 @@
       
       <div class="block">
         <cl-button type="default" @click="showLoadingToast">加载提示</cl-button>
+        <br>
+        <cl-button type="default" @click="showLoadingToastWithMsg">加载提示文字</cl-button>
       </div>
       
       <div class="block">
         <cl-button type="default" @click="showSuccessToast">成功提示</cl-button>
+        <br>
+        <cl-button type="default" @click="showFailToast">失败提示</cl-button>
       </div>
       
     </div>
@@ -36,8 +40,28 @@ export default {
     showLoadingToast () {
       Toast.loading()
     },
+    showLoadingToastWithMsg () {
+      const toast = Toast.loading({
+        duration: 0,
+        forbidClick: true,
+        message: '倒计时 3 秒'
+      })
+      let second = 3
+      const timer = setInterval(() => {
+        second--
+        if (second) {
+          toast.message = `倒计时 ${second} 秒`
+        } else {
+          clearInterval(timer)
+          Toast.clear()
+        }
+      }, 1000)
+    },
     showSuccessToast () {
       Toast.success('成功文案')
+    },
+    showFailToast () {
+      Toast.fail('失败文案')
     },
     onClickAlert () {
       Dialog.alert({

@@ -9,7 +9,7 @@
         <!-- with icon -->
         <template v-if="displayStyle === 'default'">
           <cl-loading v-if="type === 'loading'" color="white"></cl-loading>
-          <cl-icon v-else class="cl-toast__icon" :name="type"></cl-icon>
+          <cl-icon v-else class="cl-toast__icon" :name="iconName"></cl-icon>
           <div v-if="message" class="cl-toast__text">{{ message }}</div>
         </template>
       </div>
@@ -23,6 +23,10 @@ import ClLoading from '../loading'
 
 const TOAST_TYPES = ['text', 'html', 'loading', 'success', 'fail']
 const DEFAULT_STYLE_LIST = ['success', 'fail', 'loading']
+const TOAST_ICONS = {
+  'success': 'checkmark-round',
+  'fail': 'alert'
+}
 export default {
   name: 'cl-toast',
   props: {
@@ -51,6 +55,9 @@ export default {
   computed: {
     displayStyle () {
       return DEFAULT_STYLE_LIST.indexOf(this.type) !== -1 ? 'default' : this.type
+    },
+    iconName () {
+      return TOAST_ICONS[this.type]
     }
   },
   methods: {},
