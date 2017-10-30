@@ -24,6 +24,7 @@ import RadioGroup from './radio-group'
 import Field from './field'
 import Actionsheet from './actionsheet'
 import Dialog from './dialog'
+import Toast from './toast'
 import Icon from './icon'
 
 const components = [
@@ -50,6 +51,7 @@ const components = [
   Field,
   Actionsheet,
   Dialog,
+  Toast,
   Icon
 ]
 
@@ -89,6 +91,7 @@ export {
   Field,
   Actionsheet,
   Dialog,
+  Toast,
   Icon
 }
 

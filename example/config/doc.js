@@ -51,6 +51,19 @@ module.exports = {
           ]
         },
         {
+          'groupName': '导航相关',
+          'list': [
+            {
+              'path': '/navbar',
+              'title': 'Navbar 导航栏'
+            },
+            {
+              'path': '/tabbar',
+              'title': 'Tabbar 标签栏'
+            }
+          ]
+        },
+        {
           'groupName': '操作反馈',
           'list': [
             {
@@ -60,6 +73,10 @@ module.exports = {
             {
               'path': '/dialog',
               'title': 'Dialog 弹出框'
+            },
+            {
+              'path': '/toast',
+              'title': 'Toast 弹出式提示'
             }
           ]
         },
