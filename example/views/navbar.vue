@@ -1,5 +1,6 @@
 <template lang="html">
-  <div class="">
+  <div class="page-navbar">
+    <div class="page-title">Navbar 导航栏</div>
     <cl-navbar class="page-part" v-model="selected">
       <cl-tab-item id="1">选项一</cl-tab-item>
       <cl-tab-item id="2">选项二</cl-tab-item>
