@@ -44,7 +44,7 @@ export default {
 @import "../style/base.scss";
 .cl-tabbar {
   background-image: linear-gradient(180deg, $color-grey, $color-grey 50%, transparent 50%);
-  background-size: 100% .1rem;
+  background-size: 100% 1px;
   background-repeat: no-repeat;
   background-position: top left;
   position: relative;

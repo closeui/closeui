@@ -124,10 +124,10 @@ export default {
   &.is-textarea {
     align-items: inherit;
     .cl-cell-title {
-      padding: .2rem 0;
+      padding: 2px 0;
     }
     .cl-cell-value {
-      padding: .1rem 0;
+      padding: 1px 0;
     }
   }
   &.is-nolabel {

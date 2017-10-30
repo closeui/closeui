@@ -23,7 +23,7 @@ export default {
 <style lang="scss">
 .cl-loading-snake {
   animation: cl-loading-rotate .8s infinite linear;
-  border: .4rem solid transparent;
+  border: 4px solid transparent;
   border-radius: 50%;
 }
 @keyframes cl-loading-rotate {

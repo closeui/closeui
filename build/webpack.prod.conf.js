@@ -16,7 +16,7 @@ var env = process.env.NODE_ENV === 'testing'
 
 var banner =
     '/*!\n' +
-    ' * BZUI v' + packageJson.version + ' (https://github.com/bigezhang/bzui)\n' +
+    ' * CloseUI v' + packageJson.version + ' (https://github.com/bigezhang/closeui)\n' +
     ' * (c) ' + new Date().getFullYear() + ' bigezhang \n' +
     ' * Released under the MIT License.\n' +
     ' */' 
@@ -34,7 +34,7 @@ var webpackConfig = merge(baseWebpackConfig, {
   },
   devtool: false,
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, '../lib'),
     filename: 'closeui.js',
     library: 'CloseUI',
     libraryTarget: 'umd'

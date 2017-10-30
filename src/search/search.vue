@@ -80,19 +80,19 @@ export default {
   background-color: $color-grey;
   box-sizing: border-box;
   display: flex;
-  padding: .8rem 1rem;
+  padding: 8px 10px;
   z-index: 1;
 }
 .cl-searchbar-inner {
   align-items: center;
   background-color: $color-white;
-  border-radius: .2rem;
+  border-radius: 2px;
   display: flex;
   flex: 1;
-  height: 2.8rem;
-  padding: .4rem .6rem;
+  height: 28px;
+  padding: 4px 6px;
   .bzui-search {
-    font-size: 1.2rem;
+    font-size: 12px;
     color: $color-grey;
   }
 }
@@ -106,12 +106,12 @@ export default {
 }
 .cl-searchbar-cancel {
   color: $color-blue;
-  margin-left: 1rem;
+  margin-left: 10px;
   text-decoration: none;
 }
 .cl-search-list {
   overflow: auto;
-  padding-top: 4.4rem;
+  padding-top: 44px;
   position: absolute;
   left: 0;
   right: 0;

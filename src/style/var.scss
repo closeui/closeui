@@ -101,12 +101,12 @@ $background-color: #f8f8f8;
 $active-color: #e8e8e8;
 $hair-color: #e5e5e5;
 
-$header-height: 4rem;
+$header-height: 40px;
 
 $button-default-color: #656b79;
 $button-default-background-color: #f6f8fa;
 $button-default-plain-color: #5a5a5a;
-$button-default-box-shadow: 0 0 .1rem #b8bbbf;
+$button-default-box-shadow: 0 0 1px #b8bbbf;
 $button-primary-color: #fff;
 $button-primary-background-color: #0093f0;
 $button-danger-color: #fff;
@@ -125,7 +125,7 @@ $btn-circle-size-sm: 28px;
 $btn-circle-size: 32px;
 $btn-circle-size-lg: 40px;
 
-$tab-item-font-size: 1.2rem;
+$tab-item-font-size: 12px;
 
 $tabbar-background-color: #fafafa;
 $tabbar-tab-item-selected-background-color: #eaeaea;

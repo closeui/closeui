@@ -168,8 +168,8 @@ export default {
 .cl-cell-swipe-button {
   height: 100%;
   display: inline-block;
-  padding: 0 1rem;
-  line-height: 4.8rem;
+  padding: 0 10px;
+  line-height: 48px;
 }
 .cl-cell-wrapper {
   position: relative;

@@ -90,11 +90,11 @@ export default {
 @import "../style/base.scss";
 .cl-button {
   appearance: none;
-  border-radius: .4rem;
+  border-radius: 4px;
   border: 0;
   color: inherit;
   display: block;
-  font-size: 1.8rem;
+  font-size: 18px;
   padding: $btn-padding-md;
   line-height: 1.5;
   outline: 0;
@@ -141,7 +141,7 @@ export default {
   background-color: $button-default-background-color;
   box-shadow: $button-default-box-shadow;
   &.is-plain {
-    border: .1rem solid $button-default-plain-color;
+    border: 1px solid $button-default-plain-color;
     background-color: transparent;
     box-shadow: none;
     color: $button-default-plain-color;
@@ -151,7 +151,7 @@ export default {
   color: $button-primary-color;
   background-color: $button-primary-background-color;
   &.is-plain {
-    border: .1rem solid $button-primary-background-color;
+    border: 1px solid $button-primary-background-color;
     background-color: transparent;
     color: $button-primary-background-color;
   }
@@ -160,7 +160,7 @@ export default {
   color: $button-danger-color;
   background-color: $button-danger-background-color;
   &.is-plain {
-    border: .1rem solid $button-danger-background-color;
+    border: 1px solid $button-danger-background-color;
     background-color: transparent;
     color: $button-danger-background-color;
   }
@@ -169,7 +169,7 @@ export default {
   color: $button-warning-color;
   background-color: $button-warning-background-color;
   &.is-plain {
-    border: .1rem solid $button-warning-background-color;
+    border: 1px solid $button-warning-background-color;
     background-color: transparent;
     color: $button-warning-background-color;
   }
@@ -180,13 +180,13 @@ export default {
 }
 .cl-button--nomal {
   display: inline-block;
-  padding: 0 1.2rem;
+  padding: 0 12px;
 }
 .cl-button--small {
   display: inline-block;
-  font-size: 1.4rem;
-  padding: 0 1.2rem;
-  height: 3.3rem;
+  font-size: 14px;
+  padding: 0 12px;
+  height: 33px;
 }
 
 .cl-icon__loading {

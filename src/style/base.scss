@@ -6,14 +6,11 @@
 *:after {
   box-sizing: border-box;
 }
-html {
-  font-size: 62.5%;
-}
 
 body {
   font-family: $fontFamily;
   line-height: 1.5;
-  font-size: 1.4rem;
+  font-size: 14px;
   font-weight: 400;
   width: 100%;
 }

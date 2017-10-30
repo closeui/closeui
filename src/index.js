@@ -22,12 +22,12 @@ import CheckboxGroup from './checkbox-group'
 import Radio from './radio'
 import RadioGroup from './radio-group'
 import Field from './field'
+import Icon from './icon'
 import Actionsheet from './actionsheet'
 import Dialog from './dialog'
 import Toast from './toast'
-import Icon from './icon'
 
-const components = {
+const components = [
   Header,
   Button,
   Cell,
@@ -49,19 +49,15 @@ const components = {
   Radio,
   RadioGroup,
   Field,
+  Icon,
   Actionsheet,
-  Dialog,
-  Toast,
-  Icon
-}
+  Dialog
+]
 
 const install = function () {
   if (install.installed) return
-  // components.forEach(component => {
-  //   Vue.component(component.name, component)
-  // })
-  Object.keys(components).forEach((key) => {
-    Vue.component(components[key].name, components[key])
+  components.map(component => {
+    Vue.component(component.name, component)
   })
 }
 
@@ -92,10 +88,10 @@ export {
   Radio,
   RadioGroup,
   Field,
+  Icon,
   Actionsheet,
   Dialog,
-  Toast,
-  Icon
+  Toast
 }
 
 export default {

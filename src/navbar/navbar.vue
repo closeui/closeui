@@ -48,15 +48,15 @@ export default {
   }
   
   .cl-tab-item {
-    padding: 1.7rem 0;
-    font-size: 1.5rem;
+    padding: 17px 0;
+    font-size: 15px;
     &:last-child {
       border-right: 0;
     }
     &.is-selected {
-      border-bottom: .3rem solid $color-blue;
+      border-bottom: 3px solid $color-blue;
       color: $color-blue;
-      margin-bottom: -.3rem;
+      margin-bottom: -3px;
     }
   }
 }
