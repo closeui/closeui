@@ -27,7 +27,7 @@ import Dialog from './dialog'
 import Toast from './toast'
 import Icon from './icon'
 
-const components = [
+const components = {
   Header,
   Button,
   Cell,
@@ -53,12 +53,15 @@ const components = [
   Dialog,
   Toast,
   Icon
-]
+}
 
 const install = function () {
   if (install.installed) return
-  components.forEach(component => {
-    Vue.component(component.name, component)
+  // components.forEach(component => {
+  //   Vue.component(component.name, component)
+  // })
+  Object.keys(components).forEach((key) => {
+    Vue.component(components[key].name, components[key])
   })
 }
 
