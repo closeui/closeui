@@ -26,6 +26,10 @@ module.exports = {
             {
               'path': '/loading',
               'title': 'Loading 加载'
+            },
+            {
+              'path': '/popup',
+              'title': 'Popup 弹出层'
             }
           ]
         },

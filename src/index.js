@@ -29,6 +29,7 @@ import Dialog from './dialog'
 import Toast from './toast'
 import Tab from './tab'
 import Tabs from './tabs'
+import Popup from './popup'
 
 const components = [
   Header,
@@ -57,7 +58,8 @@ const components = [
   Actionsheet,
   Dialog,
   Tab,
-  Tabs
+  Tabs,
+  Popup
 ]
 
 const install = function () {
@@ -100,7 +102,8 @@ export {
   Dialog,
   Toast,
   Tab,
-  Tabs
+  Tabs,
+  Popup
 }
 
 export default {
