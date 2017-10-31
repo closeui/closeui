@@ -4,7 +4,7 @@
       <div class="cl-tabs__swipe" ref="swipe">
         <div class="cl-tabs__nav cl-tabs__nav--line">
           <div class="cl-tabs__nav-bar" :style="navBarStyle"></div>
-          <div class="cl-tab cl-hairline"
+          <div class="cl-tab"
             v-for="(tab, index) in tabs"
             :key="index"
             :class="{'cl-tab--active': index === curActive}"
@@ -20,7 +20,7 @@
       v-else
       :class="[`cl-tabs__nav--${this.type}`]">
       <div class="cl-tabs__nav-bar" :style="navBarStyle" v-if="type === 'line'"></div>
-      <div class="cl-tab cl-hairline"
+      <div class="cl-tab"
         v-for="(tab, index) in tabs"
         :key="index"
         :class="{'cl-tab--active': index === curActive}"
