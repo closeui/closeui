@@ -26,6 +26,8 @@ import Icon from './icon'
 import Actionsheet from './actionsheet'
 import Dialog from './dialog'
 import Toast from './toast'
+import Tab from './tab'
+import Tabs from './tabs'
 
 const components = [
   Header,
@@ -51,7 +53,9 @@ const components = [
   Field,
   Icon,
   Actionsheet,
-  Dialog
+  Dialog,
+  Tab,
+  Tabs
 ]
 
 const install = function () {
@@ -91,7 +95,9 @@ export {
   Icon,
   Actionsheet,
   Dialog,
-  Toast
+  Toast,
+  Tab,
+  Tabs
 }
 
 export default {
