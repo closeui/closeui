@@ -10,6 +10,7 @@ import Col from './col'
 import Row from './row'
 import TabItem from './tab-item'
 import Tabbar from './tabbar'
+import TabbarItem from './tabbar-item'
 import TabContainerItem from './tab-container-item'
 import TabContainer from './tab-container'
 import Navbar from './navbar'
@@ -39,6 +40,7 @@ const components = [
   Row,
   TabItem,
   Tabbar,
+  TabbarItem,
   TabContainerItem,
   TabContainer,
   Navbar,
@@ -80,6 +82,7 @@ export {
   Row,
   TabItem,
   Tabbar,
+  TabbarItem,
   TabContainerItem,
   TabContainer,
   Navbar,
