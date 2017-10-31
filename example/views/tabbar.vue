@@ -1,33 +1,24 @@
 <template lang="html">
-  <div class="">
-    <div class="">
-      <cl-cell class="page-part" title="当前选中" :value="selected"></cl-cell>
+  <div class="page-tabbar">
+    <div class="page-title">Tabbar 标签栏</div>
+    <div class="page-body">
+      <cl-tabbar v-model="active" class="tabbar1">
+        <cl-tabbar-item icon="navicon-round">标签</cl-tabbar-item>
+        <cl-tabbar-item icon="printer" dot>标签</cl-tabbar-item>
+        <cl-tabbar-item icon="cube" info="5">标签</cl-tabbar-item>
+        <cl-tabbar-item icon="ios-folder">标签</cl-tabbar-item>
+      </cl-tabbar>
+      
+      <cl-tabbar v-model="active2" class="tabbar2">
+        <cl-tabbar-item>
+          <span>自定义</span>
+          <img slot="icon" :src="active2 === 0 ? icon.active : icon.normal" alt="">
+        </cl-tabbar-item>
+        <cl-tabbar-item icon="printer" dot>标签</cl-tabbar-item>
+        <cl-tabbar-item icon="cube" info="5">标签</cl-tabbar-item>
+        <cl-tabbar-item icon="ios-folder">标签</cl-tabbar-item>
+      </cl-tabbar>
     </div>
-    <cl-tab-container class="page-tabbar-container" v-model="selected">
-      <cl-tab-container-item id="首页">
-        <cl-cell v-for="n in 10" :key="n" :title="`餐厅${n}`"></cl-cell>
-      </cl-tab-container-item>
-      <cl-tab-container-item id="发现">
-        <cl-cell v-for="n in 5" :key="n" :title="`发现${n}`"></cl-cell>
-      </cl-tab-container-item>
-      <cl-tab-container-item id="订单">
-        <cl-cell v-for="n in 16" :key="n" :title="`订单${n}`"></cl-cell>
-      </cl-tab-container-item>
-    </cl-tab-container>
-    <cl-tabbar v-model="selected" fixed>
-      <cl-tab-item id="首页">
-        <img slot="icon" src="http://placehold.it/100x100" alt="" />
-        首页
-      </cl-tab-item>
-      <cl-tab-item id="发现">
-        <img slot="icon" src="http://placehold.it/100x100" alt="" />
-        发现
-      </cl-tab-item>
-      <cl-tab-item id="订单">
-        <img slot="icon" src="http://placehold.it/100x100" alt="" />
-        订单
-      </cl-tab-item>
-    </cl-tabbar>
   </div>
 </template>
 
@@ -35,7 +26,12 @@
 export default {
   data: function () {
     return {
-      selected: '首页'
+      active: 0,
+      active2: 0,
+      icon: {
+        normal: 'https://ws1.sinaimg.cn/large/e0653793gy1fl1fi53vabj205k05kmx0.jpg',
+        active: 'https://ws1.sinaimg.cn/large/e0653793gy1fl1fi541joj205k05kt8k.jpg'
+      }
     }
   },
   computed: {},
@@ -44,5 +40,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.tabbar1 {
+  bottom: 100px;
+}
 </style>

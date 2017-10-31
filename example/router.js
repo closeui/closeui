@@ -22,6 +22,7 @@ import ActionSheet from './views/action-sheet'
 import Dialog from './views/dialog'
 import Toast from './views/toast'
 import Tab from './views/tab'
+import Popup from './views/popup'
 Vue.use(Router)
 
 const router = new Router({
@@ -47,6 +48,7 @@ const router = new Router({
     { path: '/dialog', component: Dialog, name: 'dialog' },
     { path: '/toast', component: Toast, name: 'toast' },
     { path: '/navbar', component: Tab, name: 'navbar' },
+    { path: '/popup', component: Popup, name: 'popup' },
     { path: '*', redirect: '/' }
   ]
 })

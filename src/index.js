@@ -10,6 +10,7 @@ import Col from './col'
 import Row from './row'
 import TabItem from './tab-item'
 import Tabbar from './tabbar'
+import TabbarItem from './tabbar-item'
 import TabContainerItem from './tab-container-item'
 import TabContainer from './tab-container'
 import Navbar from './navbar'
@@ -28,6 +29,7 @@ import Dialog from './dialog'
 import Toast from './toast'
 import Tab from './tab'
 import Tabs from './tabs'
+import Popup from './popup'
 
 const components = [
   Header,
@@ -39,6 +41,7 @@ const components = [
   Row,
   TabItem,
   Tabbar,
+  TabbarItem,
   TabContainerItem,
   TabContainer,
   Navbar,
@@ -55,7 +58,8 @@ const components = [
   Actionsheet,
   Dialog,
   Tab,
-  Tabs
+  Tabs,
+  Popup
 ]
 
 const install = function () {
@@ -80,6 +84,7 @@ export {
   Row,
   TabItem,
   Tabbar,
+  TabbarItem,
   TabContainerItem,
   TabContainer,
   Navbar,
@@ -97,7 +102,8 @@ export {
   Dialog,
   Toast,
   Tab,
-  Tabs
+  Tabs,
+  Popup
 }
 
 export default {
