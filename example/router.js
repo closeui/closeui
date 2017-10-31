@@ -21,6 +21,7 @@ import Field from './views/field'
 import ActionSheet from './views/action-sheet'
 import Dialog from './views/dialog'
 import Toast from './views/toast'
+import Tab from './views/tab'
 Vue.use(Router)
 
 const router = new Router({
@@ -33,7 +34,7 @@ const router = new Router({
     { path: '/cell', component: Cell, name: 'cell' },
     { path: '/cellswipe', component: CellSwipe, name: 'cellswipe' },
     { path: '/tabbar', component: Tabbar, name: 'tabbar' },
-    { path: '/navbar', component: Navbar, name: 'navbar' },
+    // { path: '/navbar', component: Navbar, name: 'navbar' },
     { path: '/tab-container', component: TabContainer, name: 'tab-container' },
     { path: '/loading', component: Loading, name: 'loading' },
     { path: '/search', component: Search, name: 'search' },
@@ -45,6 +46,7 @@ const router = new Router({
     { path: '/action-sheet', component: ActionSheet, name: 'action-sheet' },
     { path: '/dialog', component: Dialog, name: 'dialog' },
     { path: '/toast', component: Toast, name: 'toast' },
+    { path: '/navbar', component: Tab, name: 'navbar' },
     { path: '*', redirect: '/' }
   ]
 })

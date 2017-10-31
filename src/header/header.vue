@@ -41,10 +41,10 @@ export default {
   box-sizing: border-box;
   color: $color-white;
   display: flex;
-  font-size: 1.4rem;
+  font-size: 14px;
   height: $header-height;
   line-height: 1;
-  padding: 0 1rem;
+  padding: 0 10px;
   position: relative;
   text-align: center;
   white-space: nowrap;

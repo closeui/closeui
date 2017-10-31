@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import VueToast from './toast'
+import ToastComponent from './toast'
 
 let instance
 
@@ -15,7 +15,7 @@ const defaultOptions = {
 
 const createInstance = () => {
   if (!instance) {
-    const ToastConstructor = Vue.extend(VueToast)
+    const ToastConstructor = Vue.extend(ToastComponent)
     instance = new ToastConstructor({
       el: document.createElement('div')
     })
@@ -51,3 +51,7 @@ Toast.clear = () => {
 }
 
 export default Toast
+
+export {
+  ToastComponent as Toast
+}

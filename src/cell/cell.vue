@@ -73,7 +73,7 @@ export default {
   background-color: $color-white;
   box-sizing: border-box;
   color: inherit;
-  min-height: 4.8rem;
+  min-height: 48px;
   display: block;
   overflow: hidden;
   position: relative;
@@ -108,11 +108,11 @@ export default {
   align-items: center;
   box-sizing: border-box;
   display: flex;
-  font-size: 1.6rem;
+  font-size: 16px;
   line-height: 1;
   min-height: inherit;
   overflow: hidden;
-  padding: 0 1rem;
+  padding: 0 10px;
   width: 100%;
 }
 .cl-cell-mask {
@@ -137,8 +137,8 @@ export default {
 .cl-cell-label {
   color: #888;
   display: block;
-  font-size: 1.2rem;
-  margin-top: .6rem;
+  font-size: 12px;
+  margin-top: 6px;
 }
 .cl-cell-title {
   flex: 1;
@@ -148,7 +148,7 @@ export default {
   display: flex;
   align-items: center;
   &.is-link {
-    margin-right: 2.4rem;
+    margin-right: 24px;
   }
 }
 .cl-cell-left {
@@ -172,7 +172,7 @@ export default {
   content: '';
   position: absolute;
   top: 50%;
-  right: 2rem;
+  right: 20px;
   width: 6px;
   height: 6px;
   transform: translateY(-50%) rotate(45deg);
@@ -181,7 +181,7 @@ export default {
 .cl-cell-right__arrow-icon {
   position: absolute;
   top: 50%;
-  right: 1rem;
+  right: 10px;
   transform: translateY(-50%);
   color: #999;
 }

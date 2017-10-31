@@ -14,7 +14,7 @@ npm install closeui -save
 ```javascript
 import Vue from 'vue'
 import CloseUI from 'closeui'
-import 'closeui/dist/closeui.css'
+import 'closeui/lib/closeui.css'
 Vue.use(CloseUI)
 ```
 

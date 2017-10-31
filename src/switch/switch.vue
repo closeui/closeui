@@ -52,7 +52,7 @@ export default {
   }
 }
 .cl-switch-label {
-  margin-left: 1rem;
+  margin-left: 10px;
   display: inline-block;
   &:empty {
     margin-left: 0;
@@ -61,10 +61,10 @@ export default {
 .cl-switch-core {
   display: inline-block;
   position: relative;
-  width: 5.2rem;
-  height: 3.2rem;
-  border: .1rem solid $color-grey;
-  border-radius: 1.6rem;
+  width: 52px;
+  height: 32px;
+  border: 1px solid $color-grey;
+  border-radius: 16px;
   box-sizing: border-box;
   background: $color-grey;
   &::after, &::before {
@@ -73,17 +73,17 @@ export default {
     top: 0;
     left: 0;
     transition: transform .3s;
-    border-radius: 1.5rem;
+    border-radius: 15px;
   }
   &::after {
-    width: 3rem;
-    height: 3rem;
+    width: 30px;
+    height: 30px;
     background-color: $color-white;
-    box-shadow: 0 .1rem .3rem rgba(0,0,0,.4);
+    box-shadow: 0 1px 3px rgba(0,0,0,.4);
   }
   &::before {
-    width: 5rem;
-    height: 3rem;
+    width: 50px;
+    height: 30px;
     background-color: #fdfdfd;
   }
 }
@@ -97,7 +97,7 @@ export default {
         transform: scale(0);
       }
       &::after {
-        transform: translateX(2rem);
+        transform: translateX(20px);
       }
     }
   }

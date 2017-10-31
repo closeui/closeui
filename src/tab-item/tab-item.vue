@@ -35,14 +35,14 @@ export default {
 @import "../style/base.scss";
 .cl-tab-item {
   display: block;
-  padding: .7rem 0;
+  padding: 7px 0;
   flex: 1;
   text-decoration: none;
 }
 .cl-tab-item-icon {
-  width: 2.4rem;
-  height: 2.4rem;
-  margin: 0 auto .5rem;
+  width: 24px;
+  height: 24px;
+  margin: 0 auto 5px;
   &:empty {
     display: none;
   }

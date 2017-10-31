@@ -74,13 +74,13 @@ export default {
 }
 .cl-checklist-label {
   display: block;
-  padding: 0 1rem;
+  padding: 0 10px;
 }
 .cl-checklist-title {
   color: $checklist-title-color;
   display: block;
-  font-size: 1.2rem;
-  margin: .8rem;
+  font-size: 12px;
+  margin: 8px;
 }
 .cl-checklist.is-limit {
   .cl-checkbox-core:not(:checked) {
@@ -95,7 +95,7 @@ export default {
 }
 .cl-checkbox-label {
   vertical-align: middle;
-  margin-left: .6rem;
+  margin-left: 6px;
 }
 .cl-checkbox-input {
   display: none;
@@ -123,8 +123,8 @@ export default {
   border-radius: 100%;
   border: 1px solid #ccc;
   position: relative;
-  width: 2rem;
-  height: 2rem;
+  width: 20px;
+  height: 20px;
   vertical-align: middle;
   &::after {
     border: 2px solid transparent;
