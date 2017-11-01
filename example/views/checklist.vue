@@ -85,7 +85,7 @@ export default {
   components: {}
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .page-checklist .page-part {
   margin-top: 4rem;
 }

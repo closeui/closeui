@@ -30,6 +30,10 @@ module.exports = {
             {
               'path': '/popup',
               'title': 'Popup 弹出层'
+            },
+            {
+              'path': '/badge',
+              'title': 'Badge 徽章'
             }
           ]
         },

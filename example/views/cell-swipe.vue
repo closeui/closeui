@@ -1,9 +1,20 @@
 <template lang="html">
-  <div class="">
-    cell-swipe
-    <cl-cell-swipe v-for="n in 10" :key="n" :right="rightButtons" :title="`${n}swipe row`">
+  <div class="page-cellswipe">
+    <div class="page-title">CellSwipe 滑动单元格</div>
+    <div class="page-body">
       
-    </cl-cell-swipe>
+      <div class="container">
+        
+        <cl-cell-swipe :right-width="65" :left-width="65">
+          <span slot="left" @click="chooseClick">选择</span>
+          <cl-cell-group>
+            <cl-cell title="单元格" value="单元格内容"></cl-cell>
+          </cl-cell-group>
+          <span slot="right" @click="deleteClick">删除</span>
+        </cl-cell-swipe>
+        
+      </div>
+    </div>
   </div>
 </template>
 
@@ -14,26 +25,22 @@ export default {
     }
   },
   created () {
-    this.rightButtons = [
-      {
-        content: 'Mark as Unread',
-        style: { background: 'lightgray', color: '#fff' }
-      }, {
-        content: 'Delete',
-        style: { background: 'red', color: '#fff' },
-        handler: () => alert('delete')
-      }
-    ]
   },
   computed: {},
   methods: {
-    leftButtonHandler (evt) {
-      console.log('left button')
+    chooseClick () {
+      console.log('choose')
+    },
+    deleteClick () {
+      console.log('delete')
     }
   },
   components: {}
 }
 </script>
 
-<style lang="css">
+<style lang="scss" scoped>
+.container {
+  margin-top: 15px;
+}
 </style>

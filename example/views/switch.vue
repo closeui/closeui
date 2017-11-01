@@ -44,7 +44,7 @@ export default {
   componets: {}
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .switch-box {
   padding-left: 10px;
   padding-bottom: 15px;

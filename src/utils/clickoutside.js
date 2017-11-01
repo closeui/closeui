@@ -2,9 +2,10 @@
  * v-clickoutside
  * @desc 点击元素外面才会触发的事件
  * @example
- * <div v-element-clickoutside="handleClose"></div>
+ * <div v-clickoutside="handleClose"></div>
  */
-
+import Vue from 'vue'
+const isServer = Vue.prototype.$isServer
 const clickoutsideContext = '@@clickoutsideContext'
 
 export default {
@@ -19,13 +20,15 @@ export default {
       methodName: binding.expression,
       arg: binding.arg || 'click'
     }
-    document.addEventListener(el[clickoutsideContext].arg, documentHandler)
+    !isServer && document.addEventListener(el[clickoutsideContext].arg, documentHandler)
   },
   update (el, binding) {
     el[clickoutsideContext].methodName = binding.expression
   },
   unbind (el) {
-    document.removeEventListener(el[clickoutsideContext].arg, el[clickoutsideContext].documentHandler)
+    !isServer && document.removeEventListener(
+      el[clickoutsideContext].arg,
+      el[clickoutsideContext].documentHandler)
   },
   install (Vue) {
     Vue.directive('clickoutside', {

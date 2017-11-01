@@ -41,7 +41,7 @@ export default {
   componets: {}
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .page-search {
   height: 100%;
 }

@@ -62,7 +62,7 @@ export default {
   components: {}
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .section-one {
   padding-left: 15px;
   .cl-radio {

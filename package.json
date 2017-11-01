@@ -1,6 +1,6 @@
 {
   "name": "closeui",
-  "version": "0.2.7",
+  "version": "0.2.9",
   "description": "A Vue.js 2.x Mobile UI",
   "author": "bigezhang",
   "main": "lib/closeui.js",
@@ -96,6 +96,7 @@
     "not ie <= 8"
   ],
   "dependencies": {
-    "array-find-index": "^1.0.2"
+    "array-find-index": "^1.0.2",
+    "vue-lazyload": "^1.1.4"
   }
 }

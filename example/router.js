@@ -23,6 +23,7 @@ import Dialog from './views/dialog'
 import Toast from './views/toast'
 import Tab from './views/tab'
 import Popup from './views/popup'
+import Badge from './views/badge'
 Vue.use(Router)
 
 const router = new Router({
@@ -33,7 +34,7 @@ const router = new Router({
     { path: '/header', component: Header, name: 'header' },
     { path: '/button', component: Button, name: 'button' },
     { path: '/cell', component: Cell, name: 'cell' },
-    { path: '/cellswipe', component: CellSwipe, name: 'cellswipe' },
+    { path: '/cell-swipe', component: CellSwipe, name: 'cellswipe' },
     { path: '/tabbar', component: Tabbar, name: 'tabbar' },
     // { path: '/navbar', component: Navbar, name: 'navbar' },
     { path: '/tab-container', component: TabContainer, name: 'tab-container' },
@@ -49,6 +50,7 @@ const router = new Router({
     { path: '/toast', component: Toast, name: 'toast' },
     { path: '/navbar', component: Tab, name: 'navbar' },
     { path: '/popup', component: Popup, name: 'popup' },
+    { path: '/badge', component: Badge, name: 'badge' },
     { path: '*', redirect: '/' }
   ]
 })
