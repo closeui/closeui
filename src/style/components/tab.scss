@@ -73,7 +73,7 @@
     left: 0;
     bottom: 0;
     height: 2px;
-    background-color: $red-500;
+    background-color: $blue-500;
     transition: transform .3s cubic-bezier(.645, .045, .355, 1);
     transform-origin: 0 0;
   }  
@@ -94,7 +94,7 @@
   }
   
   &--active {
-    color: $red-500;
+    color: $blue-500;
   }
   
   &__pane {
