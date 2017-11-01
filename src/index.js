@@ -32,6 +32,7 @@ import Tabs from './tabs'
 import Popup from './popup'
 import Badge from './badge'
 import Lazyload from './lazyload'
+import Picker from './picker'
 
 const components = [
   Header,
@@ -62,7 +63,8 @@ const components = [
   Tab,
   Tabs,
   Popup,
-  Badge
+  Badge,
+  Picker
 ]
 
 const install = function () {
@@ -108,7 +110,8 @@ export {
   Tabs,
   Popup,
   Badge,
-  Lazyload
+  Lazyload,
+  Picker
 }
 
 export default {

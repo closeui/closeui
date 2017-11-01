@@ -25,6 +25,7 @@ import Tab from './views/tab'
 import Popup from './views/popup'
 import Badge from './views/badge'
 import Lazyload from './views/lazyload'
+import Picker from './views/picker'
 Vue.use(Router)
 
 const router = new Router({
@@ -37,7 +38,6 @@ const router = new Router({
     { path: '/cell', component: Cell, name: 'cell' },
     { path: '/cell-swipe', component: CellSwipe, name: 'cellswipe' },
     { path: '/tabbar', component: Tabbar, name: 'tabbar' },
-    // { path: '/navbar', component: Navbar, name: 'navbar' },
     { path: '/tab-container', component: TabContainer, name: 'tab-container' },
     { path: '/loading', component: Loading, name: 'loading' },
     { path: '/search', component: Search, name: 'search' },
@@ -53,6 +53,7 @@ const router = new Router({
     { path: '/popup', component: Popup, name: 'popup' },
     { path: '/badge', component: Badge, name: 'badge' },
     { path: '/lazyload', component: Lazyload, name: 'lazyload' },
+    { path: '/picker', component: Picker, name: 'picker' },
     { path: '*', redirect: '/' }
   ]
 })

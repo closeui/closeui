@@ -2,7 +2,23 @@
   <div class="page-lazyload">
     <div class="page-title">Lazyload 图片懒加载</div>
     <div class="page-body">
-      <img v-for="img in imageList" v-lazy="img" alt="">
+      <div class="container">
+        <div class="img-title">基础用法</div>
+        <img v-for="img in imageList" v-lazy="img" alt="">
+      </div>
+      
+      <div class="container">
+        <div class="img-title">背景加载</div>
+        <img v-for="img in backgroundImageList" v-lazy:background-image="img" alt="">
+      </div>
+      
+      <div class="container">
+        <div class="img-title">懒加载模块</div>
+        <lazy-component>
+          <img v-for="img in componentImageList" v-lazy="img" alt="">
+        </lazy-component>
+      </div>
+      
     </div>
   </div>
 </template>
@@ -35,5 +51,22 @@ export default {
   components: {}
 }
 </script>
-<style>
+<style lang="scss" scoped>
+.page-body {
+  .container {
+    padding: 15px;
+  }
+  
+  img, div[lazy] {
+    width: 100%;
+    height: 250px;
+    margin: 10px 0 0;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    background-size: 315px 250px;
+    background-position: 15px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+  }
+}
 </style>

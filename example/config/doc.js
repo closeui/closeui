@@ -89,6 +89,10 @@ module.exports = {
             {
               'path': '/toast',
               'title': 'Toast 弹出式提示'
+            },
+            {
+              'path': '/picker',
+              'title': 'Picker 选择器'
             }
           ]
         },
