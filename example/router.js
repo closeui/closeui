@@ -24,6 +24,7 @@ import Toast from './views/toast'
 import Tab from './views/tab'
 import Popup from './views/popup'
 import Badge from './views/badge'
+import Lazyload from './views/lazyload'
 Vue.use(Router)
 
 const router = new Router({
@@ -51,6 +52,7 @@ const router = new Router({
     { path: '/navbar', component: Tab, name: 'navbar' },
     { path: '/popup', component: Popup, name: 'popup' },
     { path: '/badge', component: Badge, name: 'badge' },
+    { path: '/lazyload', component: Lazyload, name: 'lazyload' },
     { path: '*', redirect: '/' }
   ]
 })

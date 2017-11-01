@@ -31,6 +31,7 @@ import Tab from './tab'
 import Tabs from './tabs'
 import Popup from './popup'
 import Badge from './badge'
+import Lazyload from './lazyload'
 
 const components = [
   Header,
@@ -106,7 +107,8 @@ export {
   Tab,
   Tabs,
   Popup,
-  Badge
+  Badge,
+  Lazyload
 }
 
 export default {
