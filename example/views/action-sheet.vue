@@ -57,7 +57,7 @@ export default {
   components: {}
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .page-body {
   box-sizing: border-box;
   padding: 10px 15px;

@@ -30,6 +30,18 @@ module.exports = {
             {
               'path': '/popup',
               'title': 'Popup 弹出层'
+            },
+            {
+              'path': '/badge',
+              'title': 'Badge 徽章'
+            },
+            {
+              'path': '/lazyload',
+              'title': 'Lazyload 图片懒加载'
+            },
+            {
+              'path': '/swipe',
+              'title': 'Swipe 轮播'
             }
           ]
         },
@@ -81,6 +93,10 @@ module.exports = {
             {
               'path': '/toast',
               'title': 'Toast 弹出式提示'
+            },
+            {
+              'path': '/picker',
+              'title': 'Picker 选择器'
             }
           ]
         },

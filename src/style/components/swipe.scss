@@ -1,0 +1,43 @@
+@import '../var';
+
+.cl-swipe {
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+  
+  &-item {
+    float: left;
+    height: 100%;
+  }
+  
+  &__track {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  &__indicators {
+    left: 50%;
+    bottom: 10px;
+    position: absolute;
+    height: $swipe-indicator;
+    transform: translate3d(-50%, 0, 0);
+    
+    > i {
+      border-radius: 100%;
+      vertical-align: top;
+      display: inline-block;
+      background-color: $grey-900;
+      width: $swipe-indicator;
+      height: $swipe-indicator;
+      &:not(:last-child) {
+        margin-right: $swipe-indicator;
+      }
+    }
+    
+    .cl-swipe__indicator {
+      &--active {
+        background-color: $color-orange;
+      }
+    }
+  }
+}

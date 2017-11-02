@@ -31,6 +31,10 @@ import Tab from './tab'
 import Tabs from './tabs'
 import Popup from './popup'
 import Badge from './badge'
+import Lazyload from './lazyload'
+import Picker from './picker'
+import Swipe from './swipe'
+import SwipeItem from './swipe-item'
 
 const components = [
   Header,
@@ -61,7 +65,10 @@ const components = [
   Tab,
   Tabs,
   Popup,
-  Badge
+  Badge,
+  Picker,
+  Swipe,
+  SwipeItem
 ]
 
 const install = function () {
@@ -106,7 +113,11 @@ export {
   Tab,
   Tabs,
   Popup,
-  Badge
+  Badge,
+  Lazyload,
+  Picker,
+  Swipe,
+  SwipeItem
 }
 
 export default {

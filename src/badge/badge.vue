@@ -1,5 +1,5 @@
 <template>
-  <span :class="['cl-badge', 'is-' + type, 'is-size-' + size]" :style="{ backgroundColor: color }">
+  <span :class="['cl-badge', 'cl-badge--' + type, 'cl-badge--' + size]" :style="{ backgroundColor: color }">
     <slot></slot>
   </span>
 </template>

@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .clui-cell-group {
   margin-top: 20px;
 }

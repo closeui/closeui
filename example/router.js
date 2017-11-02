@@ -23,6 +23,10 @@ import Dialog from './views/dialog'
 import Toast from './views/toast'
 import Tab from './views/tab'
 import Popup from './views/popup'
+import Badge from './views/badge'
+import Lazyload from './views/lazyload'
+import Picker from './views/picker'
+import Swipe from './views/swipe'
 Vue.use(Router)
 
 const router = new Router({
@@ -33,9 +37,8 @@ const router = new Router({
     { path: '/header', component: Header, name: 'header' },
     { path: '/button', component: Button, name: 'button' },
     { path: '/cell', component: Cell, name: 'cell' },
-    { path: '/cellswipe', component: CellSwipe, name: 'cellswipe' },
+    { path: '/cell-swipe', component: CellSwipe, name: 'cellswipe' },
     { path: '/tabbar', component: Tabbar, name: 'tabbar' },
-    // { path: '/navbar', component: Navbar, name: 'navbar' },
     { path: '/tab-container', component: TabContainer, name: 'tab-container' },
     { path: '/loading', component: Loading, name: 'loading' },
     { path: '/search', component: Search, name: 'search' },
@@ -49,6 +52,10 @@ const router = new Router({
     { path: '/toast', component: Toast, name: 'toast' },
     { path: '/navbar', component: Tab, name: 'navbar' },
     { path: '/popup', component: Popup, name: 'popup' },
+    { path: '/badge', component: Badge, name: 'badge' },
+    { path: '/lazyload', component: Lazyload, name: 'lazyload' },
+    { path: '/picker', component: Picker, name: 'picker' },
+    { path: '/swipe', component: Swipe, name: 'swipe' },
     { path: '*', redirect: '/' }
   ]
 })

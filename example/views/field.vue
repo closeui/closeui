@@ -42,7 +42,7 @@ export default {
   components: {}
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .field-box {
   margin-bottom: 10px;
 }

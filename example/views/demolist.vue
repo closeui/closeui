@@ -30,7 +30,7 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .demo-nav {
   width: 100%;
   box-sizing: border-box;
@@ -61,6 +61,14 @@ export default {
     color: #666;
     margin-bottom: 50px;
   }
+  
+  
+  @media screen and (max-width: 320px) {
+    .clui-title {
+      font-size: 16px;
+    }
+  }
+  
 }
 
 </style>

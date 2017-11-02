@@ -42,7 +42,7 @@ export default {
   components: {}
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .page-layout {
   .cl-row {
     padding: 0 15px;

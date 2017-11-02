@@ -1,0 +1,48 @@
+@import '../var';
+
+.cl-cell-swipe {
+  overflow: hidden;
+  position: relative;
+  
+  &__wrapper,
+  &__left,
+  &__right {
+    transition: transform .15s ease-in-out;
+  }
+  
+  &__left,
+  &__right {
+    top: 0;
+    height: 100%;
+    position: absolute;
+  }
+  
+  &__left {
+    left: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  
+  &__right {
+    right: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.cl-cell-swipe__left,
+.cl-cell-swipe__right {
+  color: #fff;
+  font-size: 16px;
+  width: 65px;
+  height: 48px;
+  display: inline-block;
+  text-align: center;
+  line-height: 48px;
+}
+
+.cl-cell-swipe__left {
+  background-color: $blue-500;
+}
+
+.cl-cell-swipe__right {
+  background-color: $red-500;
+}
