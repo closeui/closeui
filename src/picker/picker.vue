@@ -3,7 +3,7 @@
     <div class="cl-picker__toolbar cl-hairline--top-bottom" v-show="showToolbar">
       <slot>
         <a href="javascript:;" class="cl-picker__cancel" @click="handlePickerCancel">取消</a>
-        <a href="javascript:;" class="cl-picker__canfirm" @click="handlePickerConfirm">完成</a>
+        <a href="javascript:;" class="cl-picker__confirm" @click="handlePickerConfirm">完成</a>
         <div v-if="title" class="cl-picker__title">{{ title }}</div>
       </slot>
     </div>

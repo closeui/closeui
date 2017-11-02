@@ -5,6 +5,9 @@
       <div class="container">
         <cl-picker :columns="pickerColumns" @change="handlePickerChange"></cl-picker>
       </div>
+      <br>
+      <div class="container-title">带toolbar的Picker</div>
+      <cl-picker show-toolbar :title="title" :columns="pickerColumns" @change="handlePickerChange" @cancel="handlePickerCancel" @confirm="handlePickerConfirm"></cl-picker>
     </div>
   </div>
 </template>
@@ -18,6 +21,7 @@ export default {
   name: '',
   data () {
     return {
+      title: '地区选择',
       pickerColumns: [
         {
           values: Object.keys(citys),
@@ -37,10 +41,20 @@ export default {
   methods: {
     handlePickerChange (picker, values) {
       picker.setColumnValues(1, citys[values[0]])
+      console.log(values)
+    },
+    handlePickerCancel () {
+      alert('picker cancel')
+    },
+    handlePickerConfirm () {
+      alert('picker confirm')
     }
   },
   components: {}
 }
 </script>
-<style>
+<style lang="scss" scoped>
+.container-title {
+  padding-left: 15px;
+}
 </style>

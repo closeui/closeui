@@ -61,6 +61,14 @@ export default {
     color: #666;
     margin-bottom: 50px;
   }
+  
+  
+  @media screen and (max-width: 320px) {
+    .clui-title {
+      font-size: 16px;
+    }
+  }
+  
 }
 
 </style>
