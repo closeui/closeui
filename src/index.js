@@ -35,6 +35,9 @@ import Lazyload from './lazyload'
 import Picker from './picker'
 import Swipe from './swipe'
 import SwipeItem from './swipe-item'
+import Tag from './tag'
+import Uploader from './uploader'
+import Panel from './panel'
 
 const components = [
   Header,
@@ -68,7 +71,10 @@ const components = [
   Badge,
   Picker,
   Swipe,
-  SwipeItem
+  SwipeItem,
+  Tag,
+  Uploader,
+  Panel
 ]
 
 const install = function () {
@@ -117,7 +123,10 @@ export {
   Lazyload,
   Picker,
   Swipe,
-  SwipeItem
+  SwipeItem,
+  Tag,
+  Uploader,
+  Panel
 }
 
 export default {
