@@ -42,6 +42,14 @@ module.exports = {
             {
               'path': '/swipe',
               'title': 'Swipe 轮播'
+            },
+            {
+              'path': '/tag',
+              'title': 'Tag 标记'
+            },
+            {
+              'path': '/panel',
+              'title': 'Panel 面板'
             }
           ]
         },
@@ -63,6 +71,10 @@ module.exports = {
             {
               'path': '/field',
               'title': 'Field 输入框'
+            },
+            {
+              'path': '/uploader',
+              'title': 'Uploader 上传'
             }
           ]
         },

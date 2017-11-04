@@ -27,6 +27,9 @@ import Badge from './views/badge'
 import Lazyload from './views/lazyload'
 import Picker from './views/picker'
 import Swipe from './views/swipe'
+import Tag from './views/tag'
+import Uploader from './views/uploader'
+import Panel from './views/panel'
 Vue.use(Router)
 
 const router = new Router({
@@ -56,6 +59,9 @@ const router = new Router({
     { path: '/lazyload', component: Lazyload, name: 'lazyload' },
     { path: '/picker', component: Picker, name: 'picker' },
     { path: '/swipe', component: Swipe, name: 'swipe' },
+    { path: '/tag', component: Tag, name: 'tag' },
+    { path: '/uploader', component: Uploader, name: 'uploader' },
+    { path: '/panel', component: Panel, name: 'panel' },
     { path: '*', redirect: '/' }
   ]
 })
