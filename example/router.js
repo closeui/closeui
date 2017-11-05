@@ -30,6 +30,7 @@ import Swipe from './views/swipe'
 import Tag from './views/tag'
 import Uploader from './views/uploader'
 import Panel from './views/panel'
+import Area from './views/area'
 Vue.use(Router)
 
 const router = new Router({
@@ -62,6 +63,7 @@ const router = new Router({
     { path: '/tag', component: Tag, name: 'tag' },
     { path: '/uploader', component: Uploader, name: 'uploader' },
     { path: '/panel', component: Panel, name: 'panel' },
+    { path: '/area', component: Area, name: 'area' },
     { path: '*', redirect: '/' }
   ]
 })

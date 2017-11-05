@@ -38,6 +38,7 @@ import SwipeItem from './swipe-item'
 import Tag from './tag'
 import Uploader from './uploader'
 import Panel from './panel'
+import Area from './area'
 
 const components = [
   Header,
@@ -74,7 +75,8 @@ const components = [
   SwipeItem,
   Tag,
   Uploader,
-  Panel
+  Panel,
+  Area
 ]
 
 const install = function () {
@@ -126,7 +128,8 @@ export {
   SwipeItem,
   Tag,
   Uploader,
-  Panel
+  Panel,
+  Area
 }
 
 export default {
