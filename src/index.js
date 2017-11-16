@@ -39,6 +39,7 @@ import Tag from './tag'
 import Uploader from './uploader'
 import Panel from './panel'
 import Area from './area'
+import ImagePreview from './image-preview'
 
 const components = [
   Header,
@@ -129,7 +130,8 @@ export {
   Tag,
   Uploader,
   Panel,
-  Area
+  Area,
+  ImagePreview
 }
 
 export default {

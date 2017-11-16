@@ -6,7 +6,7 @@
     @touchmove="onTouchMove"
     @touchend="onTouchEnd"
     @touchcancel="onTouchEnd">
-    <cl-swipe :initialSwipe="startPosition">
+    <cl-swipe :initialSwipe="startPosition" :showIndicators="showIndicators">
       <cl-swipe-item v-for="(item, index) in images" :key="index">
         <img :src="item" alt="" class="cl-image-preview__image">
       </cl-swipe-item>
@@ -34,7 +34,8 @@ export default {
   data () {
     return {
       images: [],
-      startPosition: 0
+      startPosition: 0,
+      showIndicators: false
     }
   },
   beforeCreate () {},
@@ -42,7 +43,25 @@ export default {
   mounted () {},
   computed: {},
   methods: {
-    
+    onTouchStart (event) {
+      this.touchStartTime = new Date()
+      this.touchStartX = event.touches[0].clientX
+      this.touchStartY = event.touches[0].clientY
+      this.deltaX = 0
+      this.deltaY = 0
+    },
+    onTouchMove (event) {
+      event.preventDefault()
+      this.deltaX = event.touches[0].clientX - this.touchStartX
+      this.deltaY = event.touches[0].clientY - this.touchStartY
+    },
+    onTouchEnd (event) {
+      event.preventDefault()
+      const deltaTime = new Date() - this.touchStartTime
+      if (deltaTime < 100 && Math.abs(this.deltaX) < 20 && Math.abs(this.deltaY) < 20) {
+        this.value = false
+      }
+    }
   },
   components: {
     ClSwipe,
