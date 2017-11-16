@@ -1,6 +1,6 @@
 {
   "name": "closeui",
-  "version": "0.4.7",
+  "version": "0.4.8",
   "description": "A Vue.js 2.x Mobile UI",
   "author": "bigezhang",
   "main": "lib/closeui.js",
