@@ -7,7 +7,7 @@ import { Lazyload } from 'src/index'
 Vue.use(CloseUI)
 Vue.use(Lazyload, {
   lazyComponent: true
-});
+})
 /* eslint-disable no-new */
 new Vue({
   router,
