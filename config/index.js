@@ -8,6 +8,7 @@ module.exports = {
   template: path.resolve(__dirname, '../example/index.html'),
   build: {
     env: require('./prod.env'),
+    assetsDemoRoot: path.resolve(__dirname, '../demo'),
     assetsRoot: path.resolve(__dirname, '../docs'),
     assetsSubDirectory: '',
     assetsPublicPath: '',

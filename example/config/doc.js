@@ -54,6 +54,10 @@ module.exports = {
             {
               'path': '/image-preview',
               'title': 'ImagePreview 图片预览'
+            },
+            {
+              'path': '/toptip',
+              'title': 'TopTip 顶部通知'
             }
           ]
         },

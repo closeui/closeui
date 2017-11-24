@@ -40,6 +40,7 @@ import Uploader from './uploader'
 import Panel from './panel'
 import Area from './area'
 import ImagePreview from './image-preview'
+import Toptip from './toptip'
 
 const components = [
   Header,
@@ -131,7 +132,8 @@ export {
   Uploader,
   Panel,
   Area,
-  ImagePreview
+  ImagePreview,
+  Toptip
 }
 
 export default {

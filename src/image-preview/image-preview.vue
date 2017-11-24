@@ -58,7 +58,10 @@ export default {
     onTouchEnd (event) {
       event.preventDefault()
       const deltaTime = new Date() - this.touchStartTime
-      if (deltaTime < 100 && Math.abs(this.deltaX) < 20 && Math.abs(this.deltaY) < 20) {
+      // console.log(`time--${deltaTime}`)
+      // console.log(`x--${this.deltaX}`)
+      // console.log(`y--${this.deltaY}`)
+      if (deltaTime < 100 && Math.abs(this.deltaX) < 20) {
         this.value = false
       }
     }

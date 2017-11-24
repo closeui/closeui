@@ -32,6 +32,7 @@ import Uploader from './views/uploader'
 import Panel from './views/panel'
 import Area from './views/area'
 import ImagePreview from './views/image-preview'
+import TopTip from './views/toptip'
 Vue.use(Router)
 
 const router = new Router({
@@ -66,6 +67,7 @@ const router = new Router({
     { path: '/panel', component: Panel, name: 'panel' },
     { path: '/area', component: Area, name: 'area' },
     { path: '/image-preview', component: ImagePreview, name: 'image-preview' },
+    { path: '/toptip', component: TopTip, name: 'toptip' },
     { path: '*', redirect: '/' }
   ]
 })
