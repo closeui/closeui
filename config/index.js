@@ -36,9 +36,9 @@ module.exports = {
   docDev: {
     env: require('./dev.env'),
     entry: {
-      document: './document/main.js'
+      documents: './documents/main.js'
     },
-    template: './document/index.html',
+    template: './documents/index.html',
     port: 8898,
     autoOpenBrowser: true,
     proxyTable: {}

@@ -1,5 +1,5 @@
 var config = require('../../config')
-var devWebpackConfig = require('./webpack.dev.conf')
+var devWebpackConfig = require('../webpack.dev.conf')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 var entry = config.docDev.entry

@@ -25,7 +25,7 @@ delete baseWebpackConfig.entry
 
 var webpackConfig = merge(baseWebpackConfig, {
   entry: {
-    app: './document/main.js'
+    app: './documents/main.js'
   },
   module: {
     rules: utils.styleLoaders({
@@ -68,6 +68,38 @@ var webpackConfig = merge(baseWebpackConfig, {
         safe: true
       }
     }),
+    // generate dist index.html
+    new HtmlWebpackPlugin({
+      filename: config.docBuild.index,
+      template: 'documents/index.html',
+      inject: true,
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true
+      },
+      chunksSortMode: 'dependency'
+    }),
+    // split vendor js into its own file
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: function (module) {
+        // any required modules inside node_modules are extracted to vendor
+        return (
+          module.resorce &&
+          /\.js$/.test(module.resource) &&
+          module.resource.indexOf(
+            path.join(__dirname, '../../node_modules')
+          ) === 0
+        )
+      }
+    }),
+    // extract webpack runtime and module manifest to its own file in order to
+    // prevent vendor hash from being updated whenever app bundle is updated
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'manifest',
+      chunks: ['vendor']
+    })
     new webpack.BannerPlugin({banner: banner, raw: true, entryOnly: true})
   ]
 })
