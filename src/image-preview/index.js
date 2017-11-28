@@ -10,7 +10,7 @@ const initInstance = () => {
   document.body.appendChild(instance.$el)
 }
 
-const ImagePreviewBox = (images, startPosition = 0, showIndicators) => {
+const ImagePreviewBox = (images, startPosition, showIndicators) => {
   if (!instance) {
     initInstance()
   }
@@ -18,6 +18,9 @@ const ImagePreviewBox = (images, startPosition = 0, showIndicators) => {
   instance.startPosition = startPosition
   instance.showIndicators = showIndicators
   instance.value = true
+  instance.$on('input', show => {
+    instance.value = show
+  })
 }
 
 export default ImagePreviewBox

@@ -25,5 +25,22 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {},
     cssSourceMap: false
+  },
+  docBuild: {
+    env: require('./prod.env'),
+    index: path.resolve(__dirname, '../docs/index.html'),
+    assetsRoot: path.resolve(__dirname, '../docs'),
+    assetsSubDirectory: '',
+    productionSourceMap: false
+  },
+  docDev: {
+    env: require('./dev.env'),
+    entry: {
+      document: './document/main.js'
+    },
+    template: './document/index.html',
+    port: 8898,
+    autoOpenBrowser: true,
+    proxyTable: {}
   }
 }

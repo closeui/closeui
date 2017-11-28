@@ -6,6 +6,7 @@
         <cl-button @click="showImagePreview">预览图片</cl-button>
         <br>
         <cl-button @click="showImagePreview(2)">指定位置预览</cl-button>
+        <br>
       </div>
     </div>
   </div>
