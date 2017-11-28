@@ -1,15 +1,22 @@
 <template>
-  <transition name="fade" mode="out-in" @after-leave="afterLeave">
+  <div id="app">
+    <router-link class="page-back" v-if="visible" :to="'/'">
+      <i class="cl-icon ion-chevron-left"></i>
+    </router-link>
     <router-view></router-view>
-  </transition>
+  </div>
 </template>
 
 <script>
 export default {
-  methods: {
-    afterLeave () {
-      window.scrollTo(0, 0)
+  computed: {
+    visible () {
+      return ['/', '/header', '/search'].indexOf(this.$route.path) < 0
     }
   }
 }
 </script>
+
+<style lang="scss">
+@import './assets/scss/main';
+</style>

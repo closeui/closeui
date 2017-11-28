@@ -13,14 +13,14 @@ var versions = require('../example/version.json')
 
 var webpackConfig = require('./webpack.docs.conf')
 
-var spinner = ora('building for production...')
+var spinner = ora('building for documents production...')
 spinner.start()
 
 if (versions.indexOf(version) === -1) versions.unshift(version);
 fs.writeFileSync('example/version.json', JSON.stringify(versions), 'utf8'); // 写入到json文件中
 
 var assetsPath = config.build.assetsRoot
-const resFiles = ['example/version.json', 'example/favicon.ico'] //资源文件
+const resFiles = ['documents/version.json', 'documents/favicon.ico'] //资源文件
 const versionPath = assetsPath + '/' + version
 const versionFiles = ['js/', 'css/', 'index.html'].map((path) => {
   return assetsPath + '/' + path
@@ -28,7 +28,7 @@ const versionFiles = ['js/', 'css/', 'index.html'].map((path) => {
 rm('-rf', versionFiles)
 cp('-R', resFiles, assetsPath)
 
-cp('-R', 'example/assets/images', assetsPath + '/images')
+cp('-R', 'documents/assets/images', assetsPath + '/images')
 
 webpack(webpackConfig, function (err, stats) {
   spinner.stop()
@@ -42,7 +42,7 @@ webpack(webpackConfig, function (err, stats) {
   }) + '\n\n')
   mkdir('-p', versionPath)
   cp('-R', versionFiles, versionPath)
-  console.log(chalk.cyan('  Build complete.\n'))
+  console.log(chalk.cyan('  Build documents complete.\n'))
   console.log(chalk.yellow(
     '  Tip: built files are meant to be served over an HTTP server.\n' +
     '  Opening index.html over file:// won\'t work.\n'

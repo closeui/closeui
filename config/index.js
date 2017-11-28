@@ -41,6 +41,7 @@ module.exports = {
     template: './documents/index.html',
     port: 8898,
     autoOpenBrowser: true,
-    proxyTable: {}
+    proxyTable: {},
+    cssSourceMap: false
   }
 }
