@@ -1,7 +1,7 @@
 var path = require('path')
-var utils = require('./utils')
+var utils = require('../utils')
 var webpack = require('webpack')
-var config = require('../config')
+var config = require('../../config')
 var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -49,7 +49,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: config.template,
+      template: config.docBuild.template,
       inject: true,
       minify: {
         removeComments: true,

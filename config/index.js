@@ -28,6 +28,7 @@ module.exports = {
   },
   docBuild: {
     env: require('./prod.env'),
+    template: path.resolve(__dirname, '../documents/index.html'),
     index: path.resolve(__dirname, '../docs/index.html'),
     assetsRoot: path.resolve(__dirname, '../docs'),
     assetsSubDirectory: '',

@@ -9,15 +9,15 @@ var chalk = require('chalk')
 var webpack = require('webpack')
 var config = require('../config')
 var version = process.env.VERSION || require('../package.json').version
-var versions = require('../example/version.json')
+var versions = require('../documents/version.json')
 
-var webpackConfig = require('./webpack.docs.conf')
+var webpackConfig = require('./document/webpack.docs.conf')
 
 var spinner = ora('building for documents production...')
 spinner.start()
 
 if (versions.indexOf(version) === -1) versions.unshift(version);
-fs.writeFileSync('example/version.json', JSON.stringify(versions), 'utf8'); // 写入到json文件中
+fs.writeFileSync('documents/version.json', JSON.stringify(versions), 'utf8'); // 写入到json文件中
 
 var assetsPath = config.build.assetsRoot
 const resFiles = ['documents/version.json', 'documents/favicon.ico'] //资源文件
@@ -42,7 +42,7 @@ webpack(webpackConfig, function (err, stats) {
   }) + '\n\n')
   mkdir('-p', versionPath)
   cp('-R', versionFiles, versionPath)
-  console.log(chalk.cyan('  Build documents complete.\n'))
+  console.log(chalk.cyan('Documents Build complete.\n'))
   console.log(chalk.yellow(
     '  Tip: built files are meant to be served over an HTTP server.\n' +
     '  Opening index.html over file:// won\'t work.\n'
