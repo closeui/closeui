@@ -1,7 +1,7 @@
 <template>
   <div class="page-layout">
     <div class="page-title">Layout</div>
-    <div class="page-subtitle">基本用法1</div>
+    <div class="page-subtitle">基本用法</div>
     <cl-row>
       <cl-col span="8">span: 8</cl-col>
       <cl-col span="8">span: 8</cl-col>

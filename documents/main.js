@@ -8,13 +8,7 @@ Vue.use(Lazyload, {
   lazyComponent: true
 })
 /* eslint-disable no-new */
-// new Vue({
-//   router,
-//   ...App
-// }).$mount('#app')
-
 new Vue({
-  el: '#app',
   router,
-  render: h => h(App)
-})
+  ...App
+}).$mount('#app')

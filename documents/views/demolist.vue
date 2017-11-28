@@ -1,6 +1,6 @@
 <template>
   <div class="demo-nav">
-    <h1 class="clui-title">Close UI Demo</h1>
+    <h1 class="clui-title">Close UI Demo doc</h1>
     <h2 class="clui-desc">移动端Vue 组件库</h2>
     <div class="component-navs">
       <div class="component-nav-item" v-for="(item, index) in data" :key="index">
