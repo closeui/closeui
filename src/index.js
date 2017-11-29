@@ -41,6 +41,7 @@ import Panel from './panel'
 import Area from './area'
 import ImagePreview from './image-preview'
 import Toptip from './toptip'
+import Infinitescroll from './infinite-scroll'
 
 const components = [
   Header,
@@ -133,7 +134,8 @@ export {
   Panel,
   Area,
   ImagePreview,
-  Toptip
+  Toptip,
+  Infinitescroll
 }
 
 export default {

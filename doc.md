@@ -18,3 +18,12 @@
 
 ## 0.5.2
 * 增加 toptip 顶部通知
+
+## 0.5.3
+* document 文档模板创建
+
+## 0.5.8
+* popup update
+
+## 0.6.0
+* infinite scroll 无限加载

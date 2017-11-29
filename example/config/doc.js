@@ -58,6 +58,10 @@ module.exports = {
             {
               'path': '/toptip',
               'title': 'TopTip 顶部通知'
+            },
+            {
+              'path': '/infinitescroll',
+              'title': 'InfiniteScroll 无限加载'
             }
           ]
         },

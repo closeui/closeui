@@ -33,6 +33,7 @@ import Panel from './views/panel'
 import Area from './views/area'
 import ImagePreview from './views/image-preview'
 import TopTip from './views/toptip'
+import InfiniteScroll from './views/infinite-scroll'
 Vue.use(Router)
 
 const router = new Router({
@@ -68,6 +69,7 @@ const router = new Router({
     { path: '/area', component: Area, name: 'area' },
     { path: '/image-preview', component: ImagePreview, name: 'image-preview' },
     { path: '/toptip', component: TopTip, name: 'toptip' },
+    { path: '/infinitescroll', component: InfiniteScroll, name: 'infinitescroll' },
     { path: '*', redirect: '/' }
   ]
 })
