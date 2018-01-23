@@ -8,6 +8,7 @@ module.exports = {
   template: path.resolve(__dirname, '../example/index.html'),
   build: {
     env: require('./prod.env'),
+    assetsDemoRoot: path.resolve(__dirname, '../demo'),
     assetsRoot: path.resolve(__dirname, '../docs'),
     assetsSubDirectory: '',
     assetsPublicPath: '',
@@ -22,6 +23,26 @@ module.exports = {
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+    proxyTable: {},
+    cssSourceMap: false
+  },
+  docBuild: {
+    env: require('./prod.env'),
+    template: path.resolve(__dirname, '../documents/index.html'),
+    index: path.resolve(__dirname, '../docs/index.html'),
+    assetsRoot: path.resolve(__dirname, '../docs'),
+    assetsSubDirectory: '',
+    portalPrefix: '/',
+    productionSourceMap: false
+  },
+  docDev: {
+    env: require('./dev.env'),
+    entry: {
+      documents: './documents/main.js'
+    },
+    template: './documents/index.html',
+    port: 8898,
+    autoOpenBrowser: true,
     proxyTable: {},
     cssSourceMap: false
   }

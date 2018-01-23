@@ -50,6 +50,18 @@ module.exports = {
             {
               'path': '/panel',
               'title': 'Panel 面板'
+            },
+            {
+              'path': '/image-preview',
+              'title': 'ImagePreview 图片预览'
+            },
+            {
+              'path': '/toptip',
+              'title': 'TopTip 顶部通知'
+            },
+            {
+              'path': '/infinitescroll',
+              'title': 'InfiniteScroll 无限加载'
             }
           ]
         },

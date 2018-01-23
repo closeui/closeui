@@ -93,7 +93,7 @@ export default {
   border-radius: 4px;
   border: 0;
   color: inherit;
-  display: block;
+  display: inline-block;
   font-size: 18px;
   padding: $btn-padding-md;
   line-height: 1.5;

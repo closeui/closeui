@@ -1,5 +1,5 @@
-import PopupManager from './popup-manager'
-import PopupContext from './popup-context'
+import manager from './popup-manager'
+import context from './popup-context'
 
 export default {
   props: {
@@ -28,14 +28,21 @@ export default {
     preventScroll: {
       type: Boolean,
       default: false
+    },
+    // 遮罩层额外样式
+    overlayStyle: {
+      type: String,
+      default: ''
+    },
+    // 遮罩层额外类
+    overlayClass: {
+      type: String,
+      default: ''
     }
   },
   data () {
     return {
-      opening: false,
       opened: false,
-      closing: false,
-      bodyOverflow: null,
       pos: {
         x: 0,
         y: 0
@@ -44,18 +51,12 @@ export default {
   },
   watch: {
     value (val) {
-      if (val) {
-        if (this.opening) return
-        this.open()
-      } else {
-        if (this.closeing) return
-        this.close()
-      }
+      this[val ? 'open' : 'close']()
     }
   },
   beforeMount () {
-    this._popupId = 'popup-' + PopupContext.plusKeyByOne('idSeed')
-    PopupManager.register(this._popupId, this)
+    this._popupId = 'popup-' + context.plusKeyByOne('idSeed')
+    context.instances[this._popupId] = this
   },
   methods: {
     recordPosition (e) {
@@ -86,54 +87,46 @@ export default {
       }
     },
     open () {
-      if (this.$isServer) return
-      if (this.opened) return
-      this.opening = true
+      if (this.opend || this.$isServer) {
+        return
+      }
       this.$emit('input', true)
-      const zIndex = this.zIndex
-      // 如果属性中传入了`zIndex`，则覆盖`popupContext`中对应的`zIndex`
-      if (zIndex) {
-        PopupContext.setContext('zIndex', zIndex)
+      // 如果属性中传入了`zIndex`，则覆盖`context`中对应的`zIndex`
+      if (this.zIndex !== undefined) {
+        context.zIndex = this.zIndex
       }
       if (this.overlay) {
-        if (this.closing) {
-          PopupManager.closeModal(this._popupId)
-          this.closing = false
-        }
-        PopupManager.openModal(this._popupId, PopupManager.nextZIndex(), this.$el)
+        manager.openModal({
+          id: this._popupId,
+          zIndex: context.plusKeyByOne('zIndex'),
+          dom: this.$el,
+          className: this.overlayClass,
+          customStyle: this.overlayStyle
+        })
         if (this.lockOnScroll) {
-          if (!this.bodyOverflow) {
-            this.bodyOverflow = document.body.style.overflow
-          }
-          document.body.style.overflow = 'hidden'
+          document.body.classList.add('cl-overflow-hidden')
         }
       }
-      this.$el.style.zIndex = PopupManager.nextZIndex()
+      this.$el.style.zIndex = context.plusKeyByOne('zIndex')
       this.opened = true
-      this.opening = false
       if (this.preventScroll) {
         document.addEventListener('touchstart', this.recordPosition, false)
         document.addEventListener('touchmove', this.watchTouchMove, false)
       }
     },
     close () {
-      if (this.closing) return
-      this.closing = true
+      if (!this.opened || this.$isServer) {
+        return
+      }
       this.$emit('input', false)
       if (this.lockOnScroll) {
-        setTimeout(() => {
-          if (this.overlay && this.bodyOverflow !== 'hidden') {
-            document.body.style.overflow = this.bodyOverflow
-          }
-          this.bodyOverflow = null
-        }, 200)
+        document.body.classList.remove('cl-overflow-hidden')
       }
       this.opened = false
       this.doAfterClose()
     },
     doAfterClose () {
-      this.closing = false
-      PopupManager.closeModal(this._popupId)
+      manager.closeModal(this._popupId)
       if (this.preventScroll) {
         document.addEventListener('touchstart', this.recordPosition, false)
         document.addEventListener('touchmove', this.watchTouchMove, false)
@@ -141,11 +134,10 @@ export default {
     }
   },
   beforeDestroy () {
-    PopupManager.deregister(this._popupId)
-    PopupManager.closeModal(this._popupId)
-    if (this.overlay && this.bodyOverflow !== null && this.bodyOverflow !== 'hidden') {
-      document.body.style.overflow = this.bodyOverflow
+    context.instances[this._popupId] = null
+    manager.closeModal(this._popupId)
+    if (this.lockOnScroll) {
+      document.body.classList.remove('cl-overflow-hidden')
     }
-    this.bodyOverflow = null
   }
 }

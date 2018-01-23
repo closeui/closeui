@@ -45,7 +45,7 @@ export default {
       if (val) {
         setTimeout(() => {
           this.show2 = false
-        }, 2000)
+        }, 20000000)
       }
     },
     show3 (val) {
