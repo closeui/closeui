@@ -3,9 +3,9 @@
     <div class="container">
       <div class="footer-logo"></div>
       <div class="footer-desc">
-        <div class="footer-copyright">© 2017 Created by<a href="//aotu.io" target="_blank"> 凹凸实验室</a></div>
+        <div class="footer-copyright">© Created by <a href="#" target="_blank">clteam</a></div>
       </div>
-      <div class="github-logo"><a href="https://github.com/o2team" target="_blank">Github</a></div>
+      <div class="github-logo"><a href="https://github.com/clteam" target="_blank">Github</a></div>
     </div>
   </footer>
 </template>
@@ -27,10 +27,10 @@ $screen-sm-max: 760px;
     width: 90%;
   }
   &-logo {
-    margin: 10px 0 14px;
+    margin: 0px 0 4px;
     width: 198px;
-    height: 40px;
-    @include image2x-background('o2logo');
+    height: 30px;
+    // @include image2x-background('o2logo');
     background-size: 100% auto;
   }
   &-desc {

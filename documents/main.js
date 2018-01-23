@@ -24,14 +24,16 @@ Vue.component('demo-box', DemoBox)
 // Vue.component('icon-list', IconList)
 
 const matchArr = window.location.href.match(/#\/(zh|en)/)
+
 const urlLang = matchArr && matchArr[1]
+
 let navigatorLang = window.navigator.language.slice(0, 2)
 
 if (['en', 'zh'].indexOf(navigatorLang) <= -1) {
   navigatorLang = ''
 }
 
-const userLang = urlLang || window.localStorage.getItem('at-ui-language') || navigatorLang || 'zh'
+const userLang = urlLang || window.localStorage.getItem('closeui-language') || navigatorLang || 'zh'
 
 
 const i18n = new VueI18n({

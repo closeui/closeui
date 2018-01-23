@@ -9,8 +9,8 @@
       <div class="nav-left">
         <div class="logo">
           <router-link :to="{ name: lang === 'en' ? 'Home-en' : 'Home' }">
-            <img class="logo-img" src="../assets/logo-at@2x.png" preload="">
-            <span>AT UIKIT</span>
+            <img class="logo-img" src="https://ws1.sinaimg.cn/large/e0653793gy1fkm6sum7vgj205k05kmx0.jpg" preload="">
+            <span>CloseUI</span>
           </router-link>
         </div>
         <i class="icon icon-menu nav-icon" @click="toggleMenu"></i>
@@ -77,8 +77,7 @@ export default {
     },
     headerCollapse () {
       const header = document.getElementById('J-page-header')
-      const offsetTop = document.body.scrollTop || 0
-
+      const offsetTop = document.documentElement.scrollTop || 0
       if (offsetTop > 50) {
         header.classList.add('collapse')
       } else {
@@ -89,7 +88,7 @@ export default {
       if (this.lang === targetLang) return
 
       this.$i18n.locale = targetLang
-      localStorage.setItem('at-ui-language', targetLang)
+      localStorage.setItem('closeui-language', targetLang)
 
       if (this.$route.name === 'Home') {
         this.$router.push({ name: 'Home-en' })
